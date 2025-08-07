@@ -140,13 +140,13 @@ function Home() {
                 <h1 className = "text-2xl mb-3 text-white">About Me</h1>
                 <div className = "flex flex-col text-pretty gap-2 text-neutral-300">
                     <p>
-                        Hello, I’m Akshit Bansal — a passionate and detail-oriented full-stack developer with a strong foundation in web technologies and a drive to create meaningful digital experiences. I enjoy turning complex problems into elegant, user-friendly solutions.
+                        Hi, I’m Akshit Bansal — a full-stack developer who enjoys building thoughtful, practical web experiences. I like solving real problems with clean, efficient code and turning ideas into things people can actually use.
                     </p>
                     <p>
-                        I specialize in building full-stack applications using the MERN stack (MongoDB, Express, React, Node.js), and have hands-on experience integrating third-party APIs, handling authentication, managing state efficiently, and ensuring responsive, accessible design.
+                        I build full-stack apps using the MERN stack (MongoDB, Express, React, and Node.js). I’ve worked on projects that involve integrating third-party APIs, setting up authentication, managing state smoothly, and making sure everything looks good and works well across different devices.
                     </p>
                     <p>
-                        I take pride in writing clean, maintainable code and continuously improving my skills.
+                        I focus on writing clean, easy-to-maintain code and always look for ways to get better at what I do.
                     </p>
                 </div>
             </ScrollSection>
