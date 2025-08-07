@@ -8,7 +8,7 @@ import ProjectCard from '../components/common/ProjectCard'
 import ProjectCardSmall from '../components/common/ProjectCardSmall'
 
 // Images
-import Inf from '../assets/projects/websites/influera.png'
+import Inf from '../assets/projects/Websites/influera.png'
 import Med from '../assets/projects/websites/medishare.png'
 import rps from '../assets/projects/games/rps.png'
 import drumKit from '../assets/projects/games/drumKit.png'

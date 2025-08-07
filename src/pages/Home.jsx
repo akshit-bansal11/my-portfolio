@@ -33,16 +33,6 @@ import cssbhack from '../assets/certificates/cssbhack.png'
 // SVG Icons
 import gmailIcon from '../assets/icons/gmail.svg';
 
-// CV
-
-function emailLink() {
-    window.open('mailto:artistbansal2004@gmail.com');
-}
-
-function phone() {
-    window.open(7009250361);
-}
-
 function Home() {
     return (
         <div className = "flex flex-col gap-10 items-center">
@@ -87,7 +77,7 @@ function Home() {
                     </div>
                     <div className='flex gap-4 text-nowrap'>
                         <motion.a
-                            href={emailLink}
+                            href="mailto:artistbansal2004@gmail.com"
                             target="_blank"
                             whileHover={{ scale: 1.5 }}
                             whileTap={{ scale: 0.95 }}
@@ -96,7 +86,7 @@ function Home() {
                             <SiGmail />
                         </motion.a>
                         <motion.a
-                            href={phone}
+                            href="tel:+917009250361"
                             whileHover={{ scale: 1.5 }}
                             whileTap={{ scale: 0.95 }}
                             className="text-white flex gap-1 items-center rounded-full text-2xl"
@@ -104,7 +94,7 @@ function Home() {
                             <FaPhone />
                         </motion.a>
                         <motion.a
-                            href="your-cv-link.pdf"
+                            href=""
                             download={true}
                             target="_blank"
                             rel="noopener noreferrer"
