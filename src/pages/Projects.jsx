@@ -15,6 +15,7 @@ import drumKit from '../assets/projects/Games/drumKit.png'
 import ticTacToe from '../assets/projects/Games/ttt.png'
 import calc from '../assets/projects/Tools/calc.png'
 import adclock from '../assets/projects/Tools/adclock.png'
+import todo from '../assets/projects/Tools/todo.png'
 import barClock from '../assets/projects/Tools/barClock.png'
 import count from '../assets/projects/Tools/count.png'
 import dclock from '../assets/projects/Tools/dclock.png'
@@ -123,6 +124,14 @@ function Projects() {
                         techStack={['HTML', 'Tailwind', 'JavaScript']}
                         githubLink="https://github.com/akshit-bansal11/analog-digital-clock"
                         demoLink="https://akshit-bansal11.github.io/analog-digital-clock/"
+                    />
+                    <ProjectCardSmall
+                        title="To DO List"
+                        description="A simple to-do list application built with React & Tailwind. Add, edit, and delete tasks easily."
+                        image={todo}
+                        techStack={['React', 'Tailwind']}
+                        githubLink="https://github.com/akshit-bansal11/to-do-list"
+                        demoLink="https://to-do-list-neon-chi.vercel.app/"
                     />
                     <ProjectCardSmall
                         title="Digital Clock"
