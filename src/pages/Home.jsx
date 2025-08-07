@@ -18,8 +18,8 @@ import { skills } from '../config/SkillsConfig.js';
 
 // Images
 import Pfp from '../assets/images/pfp.jpg'
-import Inf from '../assets/projects/websites/influera.png'
-import Med from '../assets/projects/websites/medishare.png'
+import Inf from '../assets/projects/Websites/influera.png'
+import Med from '../assets/projects/Websites/mediShare.png'
 
 // Badges and Certificates
 import cppBadge from '../assets/badges/cppBadge.png'
