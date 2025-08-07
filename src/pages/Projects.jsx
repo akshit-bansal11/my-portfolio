@@ -9,7 +9,7 @@ import ProjectCardSmall from '../components/common/ProjectCardSmall'
 
 // Images
 import Inf from '../assets/projects/Websites/influera.png'
-import Med from '../assets/projects/websites/medishare.png'
+import Med from '../assets/projects/Websites/medishare.png'
 import rps from '../assets/projects/games/rps.png'
 import drumKit from '../assets/projects/games/drumKit.png'
 import ticTacToe from '../assets/projects/games/ttt.png'
