@@ -1,8 +1,8 @@
 // Dependencies
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLocationDot, FaCircle, FaGithub, FaLinkedinIn, FaDownload, FaXTwitter, FaHackerrank } from 'react-icons/fa6';
-import { SiLeetcode } from "react-icons/si";
+import { FaLocationDot, FaCircle, FaGithub, FaLinkedinIn, FaDownload, FaXTwitter, FaHackerrank, FaPhone } from 'react-icons/fa6';
+import { SiGmail, SiLeetcode } from "react-icons/si";
 import { GoArrowUpRight } from "react-icons/go";
 
 // Components
@@ -18,8 +18,10 @@ import { skills } from '../config/SkillsConfig.js';
 
 // Images
 import Pfp from '../assets/images/pfp.jpg'
-import Inf from '../assets/images/influera.png'
-import Med from '../assets/images/medishare.png'
+import Inf from '../assets/projects/websites/influera.png'
+import Med from '../assets/projects/websites/medishare.png'
+
+// Badges and Certificates
 import cppBadge from '../assets/badges/cppBadge.png'
 import cBadge from '../assets/badges/cBadge.png'
 import ceisd from '../assets/certificates/ceisd.png'
@@ -27,6 +29,19 @@ import ceiga from '../assets/certificates/ceiga.png'
 import sqlbhack from '../assets/certificates/sqlbhack.png'
 import jsbhack from '../assets/certificates/jsbhack.png'
 import cssbhack from '../assets/certificates/cssbhack.png'
+
+// SVG Icons
+import gmailIcon from '../assets/icons/gmail.svg';
+
+// CV
+
+function emailLink() {
+    window.open('mailto:artistbansal2004@gmail.com');
+}
+
+function phone() {
+    window.open(7009250361);
+}
 
 function Home() {
     return (
@@ -70,17 +85,37 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <motion.a
-                        href="your-cv-link.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="text-white flex gap-1 items-center bg-neutral-700 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-amber-400 hover:text-neutral-800"
-                    >
-                        <FaDownload />
-                        <p>Download CV</p>
-                    </motion.a>
+                    <div className='flex gap-4 text-nowrap'>
+                        <motion.a
+                            href={emailLink}
+                            target="_blank"
+                            whileHover={{ scale: 1.5 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="text-white flex gap-1 items-center rounded-full text-3xl"
+                        >
+                            <SiGmail />
+                        </motion.a>
+                        <motion.a
+                            href={phone}
+                            whileHover={{ scale: 1.5 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="text-white flex gap-1 items-center rounded-full text-2xl"
+                        >
+                            <FaPhone />
+                        </motion.a>
+                        <motion.a
+                            href="your-cv-link.pdf"
+                            download={true}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="text-white flex gap-1 items-center bg-neutral-700 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-amber-400 hover:text-neutral-800"
+                        >
+                            <FaDownload />
+                            <p>Download CV</p>
+                        </motion.a>
+                    </div>
                 </motion.div>
 
                 {/* Social Panel */}
@@ -140,32 +175,78 @@ function Home() {
                         title = 'Medishare'
                         description = 'MediShare is a donation-based platform that connects medicine donors with people in need through a secure and verified system.'
                         image = {Med}
+                        techStack = {['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Cloudinary', 'Gemini API', 'React Icons', 'Framer Motion', 'React Router DOM']}
                     />
                     <ProjectCard
                         title="Influera"
                         description="A website made to facilitate the collaboration between small-time influencers and potential investors and clients."
                         image={Inf}
-                        cta={{ link: "https://github.com/yourproject", label: "GitHub" }}
+                        techStack={['Node.js', 'Express', 'HTML', 'CSS', 'JavaScript', 'Cloudinary', 'Font Awesome']}
+                        demoLink="https://influera.onrender.com/"
+                        githubLink="https://github.com/akshit-bansal11/Influera"
                     />
                 </div>
             </ScrollSection>
 
             {/* Experience Section */}
-            <ScrollSection id = 'experience' className='flex flex-col gap-2 bg-neutral-800 rounded-2xl p-8 w-full '>
+            <ScrollSection id = 'experience' className='flex flex-col gap-4 bg-neutral-800 rounded-2xl p-8 w-full '>
                 <div className = "flex justify-between w-full">
                     <h1 className = "text-2xl mb-3 text-white">Experience</h1>
                 </div>
-                <ExpItem
-                    location= 'Remote'
-                    company = 'Bluestock Fintech'
-                    role = 'Software Development Engineer Intern'
-                    date = 'Oct 2024 - Nov 2024'
-                    points = {[
-                        "Developed an IPO Dashboard, a full-stack web application for tracking IPOs.",
-                        "Implemented real-time IPO listings, user portfolio management, and financial analytics.",
-                        "Used Node.js, Express.js, MySQL, and frontend frameworks for seamless user experience",
-                    ]}
-                />
+                <div>
+                    <div className = "flex justify-between w-full">
+                        <h1 className = "text-lg mb-3 text-white">Internship</h1>
+                    </div>
+                    <ExpItem
+                        location= 'Remote'
+                        company = 'Bluestock Fintech'
+                        role = 'Software Development Engineer Intern'
+                        date = 'Oct 2024 - Nov 2024'
+                        points = {[
+                            "Developed an IPO Dashboard, a full-stack web application for tracking IPOs.",
+                            "Implemented real-time IPO listings, user portfolio management, and financial analytics.",
+                            "Used Node.js, Express.js, MySQL, and frontend frameworks for seamless user experience",
+                        ]}
+                    />
+                </div>
+                <div className='flex flex-col gap-2'>
+                    <div className = "flex justify-between w-full">
+                        <h1 className = "text-lg mb-3 text-white">Training</h1>
+                    </div>
+                    <ExpItem
+                        location= 'Punjab, India'
+                        company = 'Bangalore Computer Education'
+                        role = 'MERN Stack Development + AI Integration Training'
+                        date = 'June 2025 - Aug 2025'
+                        points = {[
+                            "MongoDB, Express.js, React.js, Node.js, Gemini API, Redux Toolkit, and Tailwind CSS.",
+                            "Developed a full-stack web application with AI integration for enhanced user experience.",
+                            "Focused on building scalable, maintainable, and efficient web applications.",
+                        ]}
+                    />
+                    <ExpItem
+                        location= 'Punjab, India'
+                        company = 'Bangalore Computer Education'
+                        role = 'Data Structures and Algorithms Training'
+                        date = 'Dec 2024 - Mar 2025'
+                        points = {[
+                            "In-depth training in data structures and algorithms, focusing on problem-solving skills.",
+                            "Covered topics such as arrays, linked lists, trees, graphs, sorting algorithms, and dynamic programming.",
+                            "Emphasized practical applications and coding challenges to enhance algorithmic thinking.",
+                        ]}
+                    />
+                    <ExpItem
+                        location= 'Punjab, India'
+                        company = 'Bangalore Computer Education'
+                        role = 'NodeJS Full Stack Development Training'
+                        date = 'June 2024 - July 2024'
+                        points = {[
+                            "Comprehensive training in Node.js for full-stack development.",
+                            "Learned to build RESTful APIs, manage databases, and create dynamic web applications.",
+                            "Focused on best practices in backend development, including security and performance optimization.",
+                        ]}
+                    />
+                </div>
             </ScrollSection>
 
             {/* Skills Sections */}
@@ -188,8 +269,8 @@ function Home() {
                 <div className='flex flex-col gap-4'>
                     <h1 className='text-xl text-neutral-400'>Achievements</h1>
                     <div className='flex gap-4'>
-                        <img className='w-20' src={cppBadge} alt="" />
-                        <img className='w-20' src={cBadge} alt="" />
+                        <motion.img whileHover={{scale: 2, translateX: 50}} className='w-20' src={cppBadge} alt="" />
+                        <motion.img whileHover={{scale: 2, translateX: 50}} className='w-20' src={cBadge} alt="" />
                     </div>
                 </div>
                 <div className='flex flex-col gap-4'>
@@ -202,46 +283,6 @@ function Home() {
                         <motion.img initial = {{opacity: 0.5, zIndex: 0}} whileHover = {{scale: 2, opacity: 1, zIndex: 2}} className='rounded-2xl' src={cssbhack} alt="" />
                     </div>
                 </div>
-            </ScrollSection>
-
-            {/* Training Section */}
-            <ScrollSection id = 'train' className='flex flex-col gap-2 bg-neutral-800 rounded-2xl p-8 w-full '>
-                <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl mb-3 text-white">Training</h1>
-                </div>
-                <ExpItem
-                    location= 'Punjab, India'
-                    company = 'Bangalore Computer Education'
-                    role = 'MERN Stack Development + AI Integration Training'
-                    date = 'June 2025 - Aug 2025'
-                    points = {[
-                        "MongoDB, Express.js, React.js, Node.js, Gemini API, Redux Toolkit, and Tailwind CSS.",
-                        "Developed a full-stack web application with AI integration for enhanced user experience.",
-                        "Focused on building scalable, maintainable, and efficient web applications.",
-                    ]}
-                />
-                <ExpItem
-                    location= 'Punjab, India'
-                    company = 'Bangalore Computer Education'
-                    role = 'Data Structures and Algorithms Training'
-                    date = 'Dec 2024 - Mar 2025'
-                    points = {[
-                        "In-depth training in data structures and algorithms, focusing on problem-solving skills.",
-                        "Covered topics such as arrays, linked lists, trees, graphs, sorting algorithms, and dynamic programming.",
-                        "Emphasized practical applications and coding challenges to enhance algorithmic thinking.",
-                    ]}
-                />
-                <ExpItem
-                    location= 'Punjab, India'
-                    company = 'Bangalore Computer Education'
-                    role = 'NodeJS Full Stack Development Training'
-                    date = 'June 2024 - July 2024'
-                    points = {[
-                        "Comprehensive training in Node.js for full-stack development.",
-                        "Learned to build RESTful APIs, manage databases, and create dynamic web applications.",
-                        "Focused on best practices in backend development, including security and performance optimization.",
-                    ]}
-                />
             </ScrollSection>
 
             {/* Education Section */}

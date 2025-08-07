@@ -4,7 +4,7 @@ function ScrollSection({ id = '', children = null, className = '' }) {
     return (
         <section
             id={id}
-            className={`${className}`}
+            className={`w-full ${className}`}
         >
             {children}
         </section>

@@ -1,47 +1,93 @@
 // src/components/ProjectCard.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Button from './Button';
+import { p } from 'framer-motion/client';
 
-const ProjectCard = ({ title, description, image, cta }) => {
+const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, githubLink, techStack = [] }) => {
+  const [tapEnabled, setTapEnabled] = useState(false);
+
+  const handleCardClick = () => {
+    if (githubLink) {
+      setTapEnabled(true);
+      window.open(githubLink, '_blank');
+    } else {
+      setTapEnabled(false);
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="group bg-neutral-700 p-5 rounded-2xl flex flex-col justify-between w-[90%]"
       whileHover={{ scale: 1.05 }}
+      whileTap={tapEnabled ? { scale: 0.97 } : {}} // Only animate if GitHub link exists
+      onClick={handleCardClick}
+      className="group bg-neutral-700 border-2 border-neutral-700 p-5 gap-4 rounded-2xl flex flex-col w-[90%]"
     >
       {/* Image Preview */}
-      <div className="relative overflow-hidden rounded-2xl mb-4">
-        <img
-          src={image}
-          alt={`${title} preview`}
-          className="opacity-60 group-hover:opacity-100 w-full h-56 sm:h-64 object-cover transition-all duration-200 rounded-2xl"
-        />
+      <div className="relative overflow-hidden">
+        {iframe ? (
+            <iframe src={iframe} className='opacity-60 group-hover:opacity-100 rounded-xl w-full h-60 object-cover transition-all duration-200 m-auto'></iframe>
+          ) : (
+            <img
+            src={image}
+            alt={`${title} preview`}
+            className="opacity-60 group-hover:opacity-100 rounded-xl w-full h-60 object-cover transition-all duration-200 m-auto"
+            />
+          )
+        }
       </div>
 
       {/* Title & Description */}
       <div className="flex flex-col gap-2 px-1 text-center sm:text-left">
-        <h2 className="text-white text-xl sm:text-2xl font-semibold">{title}</h2>
-        <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">{description}</p>
+        <h2 className="text-white text-2xl font-semibold">{title}</h2>
+        <p className="text-neutral-300">{description}</p>
       </div>
 
-      {/* Optional CTA (e.g., GitHub link, case study, etc.) */}
-      {cta && (
-        <div className="mt-4 flex justify-center sm:justify-start">
-          <motion.a
-            href={cta.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="text-sm px-4 py-2 bg-white text-neutral-900 font-semibold rounded-xl transition-colors duration-300 hover:bg-neutral-200"
-          >
-            {cta.label || 'View Project'}
-          </motion.a>
+      {/* Tech Stack */}
+      <motion.ul className="flex gap-2 flex-wrap mt-2">
+        {techStack.map((tech, index) => (
+          <li key={index} className="text-xs text-neutral-300 bg-neutral-800 border-1 border-neutral-400 px-2 py-1 rounded-full">
+            {tech}
+          </li>
+        ))}
+      </motion.ul>
+
+      {/* Buttons */}
+      {demoLink || githubLink || designLink ? (
+        <div className="mt-4 flex justify-center sm:justify-start gap-3">
+          {demoLink && (
+            <Button
+              className="bg-neutral-300 text-neutral-900 px-2 py-1 hover:bg-white"
+              onClick={() => window.open(demoLink, '_blank')}
+              text="Demo"
+            />
+          )}
+          {githubLink && (
+            <Button
+              className="bg-neutral-300 text-neutral-900 px-2 py-1 hover:bg-white"
+              onClick={() => window.open(githubLink, '_blank')}
+              text="GitHub"
+            />
+          )}
+          {designLink && (
+            <Button
+              className="bg-neutral-300 text-neutral-900 px-2 py-1 hover:bg-white"
+              onClick={() => window.open(designLink, '_blank')}
+              text="See Design"
+            />
+          )}
+        </div>
+      ) : (
+        <div className="mt-4 flex text-red-500 text-sm justify-start text-center">
+          *Not Deployed Yet
         </div>
       )}
+      
     </motion.div>
   );
 };
 
 export default ProjectCard;
+``

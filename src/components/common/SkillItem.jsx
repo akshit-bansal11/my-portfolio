@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import clsx from 'clsx';
 
 const IconCard = ({ Icon, name }) => {
     const [isHovered, setIsHovered] = React.useState(false);
@@ -13,7 +14,7 @@ const IconCard = ({ Icon, name }) => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
             >
-                <Icon className="text-3xl text-neutral-400 group-hover:text-white transition-colors duration-300" />
+                <Icon className={clsx("text-3xl transition-colors duration-300}", isHovered ? `text-white` : `text-neutral-400`)} />
             </motion.div>
             <motion.p
                 initial={{ opacity: 0, y: -10 }}
