@@ -71,6 +71,14 @@ function Projects() {
                         githubLink="https://github.com/akshit-bansal11/drumKit"
                     />
                     <ProjectCardSmall
+                        title="Memory Game"
+                        description="A fun and modern Memory Game built with React, Vite, Tailwind CSS, Framer Motion, and React Icons."
+                        image={drumKit}
+                        techStack={['React', 'Tailwind']}
+                        demoLink="https://memory-game-theta-virid.vercel.app/"
+                        githubLink="https://github.com/akshit-bansal11/memory-game"
+                    />
+                    <ProjectCardSmall
                         title="Tic Tac Toe"
                         description="A simple tic tac toe game built with HTML, CSS & JavaScript to against your friends."
                         image={ticTacToe}
