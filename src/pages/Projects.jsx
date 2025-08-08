@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import ScrollSection from '../components/common/ScrollSection'
 import ProjectCard from '../components/common/ProjectCard'
 import ProjectCardSmall from '../components/common/ProjectCardSmall'
+import ProjectCardSmallWimg from '../components/common/ProjectCardSmallWimg'
 
 // Images
 import Inf from '../assets/projects/Websites/influera.png'
@@ -187,6 +188,27 @@ function Projects() {
                         image={ecom}
                         techStack={['Figma']}
                         designLink="https://www.figma.com/design/32zeVVPSZBHL9GFSEXUqHp/Ecom-base?node-id=1-3&p=f&t=JxJOvK2iMlsW3gJ2-0/"
+                    />
+                </motion.div>
+            </ScrollSection>
+            <ScrollSection id="scripts" className="w-full p-10 bg-neutral-800 rounded-2xl flex flex-col gap-10">
+                <h1 className='text-3xl text-white'>Scripts</h1>
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="w-full grid grid-cols-2 gap-x-2 gap-y-8 align-middle justify-items-center"
+                >
+                    <ProjectCardSmallWimg
+                        title="Merge Folders"
+                        description="A python script to merge two or more folders."
+                        techStack={['Python']}
+                        githubLink="https://github.com/akshit-bansal11/useful-scripts"
+                    />
+                    <ProjectCardSmallWimg
+                        title="Audio Converter"
+                        techStack={['Python']}
+                        description="A python script to convert audio files from one format to another."
+                        githubLink="https://github.com/akshit-bansal11/useful-scripts"
                     />
                 </motion.div>
             </ScrollSection>
