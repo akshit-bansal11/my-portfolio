@@ -135,7 +135,7 @@ function Projects() {
                         demoLink="https://akshit-bansal11.github.io/analog-digital-clock/"
                     />
                     <ProjectCardSmall
-                        title="To DO List"
+                        title="To Do List"
                         description="A simple to-do list application built with React & Tailwind. Add, edit, and delete tasks easily."
                         image={todo}
                         techStack={['React', 'Tailwind']}

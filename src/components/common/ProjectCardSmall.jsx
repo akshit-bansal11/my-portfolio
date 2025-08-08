@@ -25,7 +25,7 @@ const ProjectCardSmall = ({ title, description, image, iframe, demoLink, githubL
       className="group bg-neutral-700 border-2 border-neutral-700 p-3 gap-3 rounded-2xl flex flex-col w-[90%]"
     >
       {/* Image Preview */}
-      <div className="relative overflow-hidden">
+      <motion.div initial = {{z: 0}} whileHover = {{scale: 2.5, z: 2}} className="relative overflow-hidden">
         {iframe ? (
             <iframe width="100%" height="10" src={iframe} className='opacity-60 object-contain group-hover:opacity-100 rounded-xl w-full h-60 transition-all duration-200 m-auto'></iframe>
           ) : (
@@ -36,7 +36,7 @@ const ProjectCardSmall = ({ title, description, image, iframe, demoLink, githubL
             />
           )
         }
-      </div>
+      </motion.div>
 
       {/* Title & Description */}
       <div className="flex flex-col gap-2 px-1 text-left">
