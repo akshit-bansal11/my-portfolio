@@ -13,6 +13,7 @@ import Med from '../assets/projects/Websites/mediShare.png'
 import rps from '../assets/projects/Games/rps.png'
 import drumKit from '../assets/projects/Games/drumKit.png'
 import ticTacToe from '../assets/projects/Games/ttt.png'
+import mem from '../assets/projects/Games/memory.png'
 import calc from '../assets/projects/Tools/calc.png'
 import adclock from '../assets/projects/Tools/adclock.png'
 import todo from '../assets/projects/Tools/todo.png'
@@ -73,7 +74,7 @@ function Projects() {
                     <ProjectCardSmall
                         title="Memory Game"
                         description="A fun and modern Memory Game built with React, Vite, Tailwind CSS, Framer Motion, and React Icons."
-                        image={drumKit}
+                        image={mem}
                         techStack={['React', 'Tailwind']}
                         demoLink="https://memory-game-theta-virid.vercel.app/"
                         githubLink="https://github.com/akshit-bansal11/memory-game"
