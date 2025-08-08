@@ -2,7 +2,6 @@
 import { FaCogs, FaHome, FaTools } from 'react-icons/fa';
 import { FaUser, FaLaptopCode, FaGamepad, FaBriefcase, FaGraduationCap, FaGlobe, FaAnglesUp } from 'react-icons/fa6';
 import { GrAchievement } from "react-icons/gr";
-import { SiBash } from "react-icons/si";
 
 export const navConfigs = {
     home: [
@@ -19,6 +18,6 @@ export const navConfigs = {
         { text: 'Games', to: 'games', icon: FaGamepad },
         { text: 'Tools', to: 'tools', icon: FaTools },
         { text: 'Designs', to: 'designs', icon: FaLaptopCode },
-        { text: 'Scripts', to: 'scripts', icon: SiBash }
+        { text: 'Scripts', to: 'scripts', icon: FaLaptopCode }
     ]
 };
