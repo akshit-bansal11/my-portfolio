@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, 
       whileHover={{ scale: 1.05 }}
       whileTap={tapEnabled ? { scale: 0.97 } : {}} // Only animate if GitHub link exists
       onClick={handleCardClick}
-      className="group bg-neutral-700 border-2 border-neutral-700 p-5 gap-4 rounded-2xl flex flex-col w-[90%]"
+      className="group bg-neutral-700 border-2 border-neutral-700 lg:p-5 md:p-3 p-1.5 lg:gap-4 md:gap-2 gap-1.5 rounded-2xl flex flex-col w-[90%]"
     >
       {/* Image Preview */}
       <div className="relative overflow-hidden">
@@ -33,7 +33,7 @@ const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, 
             <img
             src={image}
             alt={`${title} preview`}
-            className="opacity-60 group-hover:opacity-100 rounded-xl w-full lg:h-60 md:h-40 h-25 object-cover transition-all duration-200 m-auto"
+            className="opacity-60 group-hover:opacity-100 rounded-xl w-full lg:h-60 md:h-40 h-20 object-cover transition-all duration-200 m-auto"
             />
           )
         }
@@ -46,9 +46,9 @@ const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, 
       </div>
 
       {/* Tech Stack */}
-      <motion.ul className="flex lg:flex-row md:flex-row sm:flex-col gap-x-2 gap-y-1 flex-wrap mt-2">
+      <motion.ul className="flex lg:flex-row md:flex-row flex-col gap-x-2 gap-y-1 flex-wrap mt-2">
         {techStack.map((tech, index) => (
-          <li key={index} className="lg:text-xs md:text-[10px] sm:text-[7px] text-neutral-300 bg-neutral-800 lg:border-1 md:border-1 border-neutral-400 px-2 py-1 rounded-full">
+          <li key={index} className="lg:text-xs md:text-[10px] text-[7px] text-neutral-300 bg-neutral-800 lg:border-1 md:border-1 border-neutral-400 px-2 py-1 rounded-full">
             {tech}
           </li>
         ))}
@@ -56,31 +56,31 @@ const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, 
 
       {/* Buttons */}
       {demoLink || githubLink || designLink ? (
-        <div className="mt-4 flex justify-center sm:justify-start gap-3">
+        <div className="mt-4 flex justify-start gap-3">
           {demoLink && (
             <Button
-              className="bg-neutral-300 text-neutral-900 px-2 py-1 hover:bg-white"
+              className="bg-neutral-300 text-neutral-900 px-2 lg:py-1  lg:text-lg md:text-sm text-[8px] hover:bg-white"
               onClick={() => window.open(demoLink, '_blank')}
               text="Demo"
             />
           )}
           {githubLink && (
             <Button
-              className="bg-neutral-300 text-neutral-900 px-2 py-1 hover:bg-white"
+              className="bg-neutral-300 text-neutral-900 px-2 lg:py-1  lg:text-lg md:text-sm text-[8px] hover:bg-white"
               onClick={() => window.open(githubLink, '_blank')}
               text="GitHub"
             />
           )}
           {designLink && (
             <Button
-              className="bg-neutral-300 text-neutral-900 px-2 py-1 hover:bg-white"
+              className="bg-neutral-300 text-neutral-900 px-2 lg:py-1  lg:text-lg md:text-sm text-[8px] hover:bg-white"
               onClick={() => window.open(designLink, '_blank')}
               text="See Design"
             />
           )}
         </div>
       ) : (
-        <div className="mt-4 flex text-red-500 text-sm justify-start text-center">
+        <div className="mt-4 flex text-red-500 lg:text-sm text-[6px] justify-start text-center">
           *Not Deployed Yet
         </div>
       )}

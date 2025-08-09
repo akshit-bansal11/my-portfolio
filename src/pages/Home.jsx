@@ -113,7 +113,7 @@ function Home() {
             </motion.div>
 
             {/* About Section */}
-            <ScrollSection id = 'about' className = "flex flex-col gap-2 bg-neutral-800 lg:p-5 md:p-3 p-1.5 lg:rounded-2xl md:rounded-xl rounded-lg w-full">
+            <ScrollSection id = 'about'>
                 <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">About Me</h1>
                 <div className = "flex flex-col lg:text-lg md:text-sm text-[8px] text-pretty gap-2 text-neutral-300">
                     <p>
@@ -129,9 +129,9 @@ function Home() {
             </ScrollSection>
 
             {/* Projects Section */}
-            <ScrollSection id = 'projects' className = "flex flex-col gap-2 bg-neutral-800 lg:p-5 md:p-3 p-1.5 lg:rounded-2xl md:rounded-xl rounded-lg w-full">
+            <ScrollSection id = 'projects'>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "lg:text-2xl md:text-lg text-sm text-white">Some Of My Projects</h1>
+                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Some of My Projects</h1>
                     <NavButton to = "/projects" >
                         <p>See More</p>                 
                         <GoArrowUpRight />    
@@ -142,7 +142,7 @@ function Home() {
                         title = 'Medishare'
                         description = 'MediShare is a donation-based platform that connects medicine donors with people in need through a secure and verified system.'
                         image = {Med}
-                        techStack = {['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Cloudinary', 'Gemini API', 'React Icons', 'Framer Motion', 'React Router DOM']}
+                        techStack = {['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'Cloudinary', 'Gemini API']}
                     />
                     <ProjectCard
                         title="Influera"
@@ -156,13 +156,13 @@ function Home() {
             </ScrollSection>
 
             {/* Experience Section */}
-            <ScrollSection id = 'experience' className='flex flex-col gap-4 bg-neutral-800 rounded-2xl p-8 w-full '>
+            <ScrollSection id = 'experience'>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl text-white">Experience</h1>
+                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Experience</h1>
                 </div>
                 <div>
                     <div className = "flex justify-between w-full">
-                        <h1 className = "text-lg text-white">Internship</h1>
+                        <h1 className = "lg:text-2xl md:text-lg text-[8px] text-neutral-400">Internship</h1>
                     </div>
                     <ExpItem
                         location= 'Remote'
@@ -178,7 +178,7 @@ function Home() {
                 </div>
                 <div className='flex flex-col gap-2'>
                     <div className = "flex justify-between w-full">
-                        <h1 className = "text-lg text-white">Training</h1>
+                        <h1 className = "lg:text-2xl md:text-lg text-[8px] text-neutral-400">Training</h1>
                     </div>
                     <ExpItem
                         location= 'Punjab, India'
@@ -217,9 +217,9 @@ function Home() {
             </ScrollSection>
 
             {/* Skills Sections */}
-            <ScrollSection id = 'skills' className='flex flex-col gap-2 bg-neutral-800 rounded-2xl p-8 w-full '>
+            <ScrollSection id = 'skills'>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl text-white">Skills</h1>
+                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Skills</h1>
                 </div>
                 <div className='flex flex-col gap-2'>
                     {skills.map((section, index) => (
@@ -229,9 +229,9 @@ function Home() {
             </ScrollSection>
 
             {/* Achievments & Certifications Sections */}
-            <ScrollSection id = 'certif' className='flex flex-col gap-8 bg-neutral-800 rounded-2xl p-8 w-full '>
+            <ScrollSection id = 'certif'>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl text-white">Achievements & Certifications</h1>
+                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Achievements & Certifications</h1>
                 </div>
                 <div className='flex flex-col gap-4'>
                     <h1 className='text-xl text-neutral-400'>Achievements</h1>
@@ -253,9 +253,9 @@ function Home() {
             </ScrollSection>
 
             {/* Education Section */}
-            <ScrollSection id = 'education' className='flex flex-col gap-2 bg-neutral-800 rounded-2xl p-8 w-full '>
+            <ScrollSection id = 'education'>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl text-white">Education</h1>
+                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Education</h1>
                 </div>
                 <EduItem
                     location= 'Punjab, India'
