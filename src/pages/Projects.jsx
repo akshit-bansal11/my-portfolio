@@ -61,16 +61,16 @@ function Projects() {
                         description="A simple rock, paper, scissors game built with HTML, CSS & JavaScript. Play against the computer and try to win!"
                         image={rps}
                         techStack={['HTML', 'CSS', 'JavaScript']}
-                        demoLink="https://akshit-bansal11.github.io/RPS/"
-                        githubLink="https://github.com/akshit-bansal11/RPS"
+                        demoLink="https://akshit-bansal11.github.io/rock-paper-scissors/"
+                        githubLink="https://github.com/akshit-bansal11/rock-paper-scissors"
                     />
                     <ProjectCardSmall
                         title="Drum Kit"
                         description="A simple drum kit game built with HTML, CSS & JavaScript. Play different sounds by pressing the keys."
                         image={drumKit}
                         techStack={['HTML', 'CSS', 'JavaScript']}
-                        demoLink="https://akshit-bansal11.github.io/drumKit/"
-                        githubLink="https://github.com/akshit-bansal11/drumKit"
+                        demoLink="https://akshit-bansal11.github.io/drum-kit/"
+                        githubLink="https://github.com/akshit-bansal11/drum-kit"
                     />
                     <ProjectCardSmall
                         title="Memory Game"
@@ -85,15 +85,15 @@ function Projects() {
                         description="A simple tic tac toe game built with HTML, CSS & JavaScript to against your friends."
                         image={ticTacToe}
                         techStack={['HTML', 'CSS', 'JavaScript']}
-                        demoLink="https://akshit-bansal11.github.io/TicTacToe/"
-                        githubLink="https://github.com/akshit-bansal11/TicTacToe"
+                        demoLink="https://akshit-bansal11.github.io/tic-tac-toe/"
+                        githubLink="https://github.com/akshit-bansal11/tic-tac-toe"
                     />
                     <ProjectCardSmall
                         title="Batting Strike Calculator"
                         description="A simple batting strike calculator built with Python. Calculate your batting strike rate and average."
                         image={code}
                         techStack={['Python']}
-                        githubLink="https://github.com/akshit-bansal11/batting_strike-calculator-app"
+                        githubLink="https://github.com/akshit-bansal11/batting-strike-calculator"
                     />
                 </motion.div>
             </ScrollSection>
@@ -109,7 +109,7 @@ function Projects() {
                         description="A simple bar clock built with React & Tailwind. Displays the current time in a unique way."
                         image={barClock}
                         techStack={['React', 'Tailwind']}
-                        demoLink="https://akshit-bansal11.github.io/barClock/"
+                        demoLink="https://akshit-bansal11.github.io/bar-clock/"
                         githubLink="https://barclock.vercel.app/"
                     />
                     <ProjectCardSmall
@@ -117,7 +117,7 @@ function Projects() {
                         description="A Real-Time Audio Visualizer built with C# & .NET. Visualizes the audio from all sources and from any audio device connected to the system."
                         image={code}
                         techStack={['C#', '.NET']}
-                        githubLink="https://github.com/akshit-bansal11/AudioVisualizer"
+                        githubLink="https://github.com/akshit-bansal11/audio-visualizer"
                     />
                     <ProjectCardSmall
                         title="Counter"
@@ -125,7 +125,7 @@ function Projects() {
                         image={count}
                         techStack={['React', 'Tailwind']}
                         demoLink="https://counter-self-beta.vercel.app/"
-                        githubLink="https://akshit-bansal11.github.io/counter/"
+                        githubLink="https://github.com/akshit-bansal11/counter/"
                     />
                     <ProjectCardSmall
                         title="Analog + Digital Clock"
@@ -163,8 +163,8 @@ function Projects() {
                         description="A simple calculator built with HTML, CSS & JavaScript. Perform basic arithmetic operations."
                         image={calc}
                         techStack={['HTML', 'CSS', 'JavaScript']}
-                        githubLink="https://github.com/akshit-bansal11/Simple-Calculator"
-                        demoLink="https://akshit-bansal11.github.io/Simple-Calculator/"
+                        githubLink="https://github.com/akshit-bansal11/simple-calculator"
+                        demoLink="https://akshit-bansal11.github.io/simple-calculator/"
                     />
                 </motion.div>
             </ScrollSection>
