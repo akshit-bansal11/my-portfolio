@@ -33,7 +33,7 @@ const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, 
             <img
             src={image}
             alt={`${title} preview`}
-            className="opacity-60 group-hover:opacity-100 rounded-xl w-full h-60 object-cover transition-all duration-200 m-auto"
+            className="opacity-60 group-hover:opacity-100 rounded-xl w-full lg:h-60 md:h-40 h-25 object-cover transition-all duration-200 m-auto"
             />
           )
         }
@@ -41,14 +41,14 @@ const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, 
 
       {/* Title & Description */}
       <div className="flex flex-col gap-2 px-1 text-center sm:text-left">
-        <h2 className="text-white text-2xl font-semibold">{title}</h2>
-        <p className="text-neutral-300">{description}</p>
+        <h2 className="text-white lg:text-2xl md:text-lg text-sm font-semibold">{title}</h2>
+        <p className="text-neutral-300 lg:text-lg md:text-sm text-[8px]">{description}</p>
       </div>
 
       {/* Tech Stack */}
-      <motion.ul className="flex gap-2 flex-wrap mt-2">
+      <motion.ul className="flex lg:flex-row md:flex-row sm:flex-col gap-x-2 gap-y-1 flex-wrap mt-2">
         {techStack.map((tech, index) => (
-          <li key={index} className="text-xs text-neutral-300 bg-neutral-800 border-1 border-neutral-400 px-2 py-1 rounded-full">
+          <li key={index} className="lg:text-xs md:text-[10px] sm:text-[7px] text-neutral-300 bg-neutral-800 lg:border-1 md:border-1 border-neutral-400 px-2 py-1 rounded-full">
             {tech}
           </li>
         ))}

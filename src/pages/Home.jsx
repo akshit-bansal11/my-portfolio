@@ -30,58 +30,40 @@ import sqlbhack from '../assets/certificates/sqlbhack.png'
 import jsbhack from '../assets/certificates/jsbhack.png'
 import cssbhack from '../assets/certificates/cssbhack.png'
 
-// SVG Icons
-import gmailIcon from '../assets/icons/gmail.svg';
-
 function Home() {
     return (
-        <div className = "flex flex-col gap-10 items-center">
+        <div className = "flex w-full flex-col gap-10 items-center">
 
             <motion.div
-            className="flex gap-1 items-center h-50 justify-center" // Center the container
-            whileHover="hovered"
-            initial="initial"
+                className="flex gap-1 items-center w-full lg:h-50 md:h-35 h-20 justify-center" // Center the container
             >
                 <motion.div
-                    variants={{
-                        initial: {
-                            x: 30, // Centered initially
-                            borderTopRightRadius: '1rem',
-                            borderBottomRightRadius: '1rem',
-                        },
-                        hovered: {
-                            x: 0, // Slide left when hovered
-                            borderTopRightRadius: '0rem',
-                            borderBottomRightRadius: '0rem',
-                        },
-                    }}
-                    transition={{ duration: 0.3 }}
-                    className="w-4xl h-full flex items-end justify-between bg-neutral-800 p-5 rounded-2xl"
+                    className="lg:w-4xl w-full h-full flex items-end justify-between bg-neutral-800 lg:p-5 md:p-3 p-2 lg:rounded-l-2xl rounded-l-lg"
                 >
-                    <div className="flex gap-4">
-                        <img src={Pfp} className="w-40 h-auto" alt="Profile" />
-                        <div className="flex flex-col justify-between my-2">
+                    <div className="flex lg:gap-4 md:gap-3 gap-1.5 h-full items-center">
+                        <img src={Pfp} className="h-full rounded-sm md:rounded-lg lg:rounded-xl" alt="Profile" />
+                        <div className="flex flex-col lg:gap-8 md:gap-5 gap-2justify-between">
                             <div>
-                                <h1 className="text-3xl text-white font-sans">Akshit Bansal</h1>
-                                <h2 className="text-lg text-neutral-400 font-sans">MERN-Stack Developer | UI, UX and Graphics Designer</h2>
-                                <div className="flex gap-1 text-neutral-400 items-center">
-                                    <FaLocationDot />
+                                <h1 className="lg:text-3xl md:text-xl text-[10px] text-white font-sans">Akshit Bansal</h1>
+                                <h2 className="lg:text-lg md:text-sm text-[8px] text-neutral-400 font-sans">MERN-Stack Developer | UI, UX and Graphics Designer</h2>
+                                <div className="flex lg:text-xl md:text-sm text-[8px] gap-1 text-neutral-400 items-center">
+                                    <FaLocationDot className='lg:text-lg md:text-xs text-[6px]' />
                                     <p>Punjab, India</p>
                                 </div>
                             </div>
                             <div className="flex gap-1 items-center">
-                                <FaCircle className="text-green-500 text-[7px] drop-shadow-sm drop-shadow-green-500" />
-                                <p className="text-neutral-400 text-xs">Available for work</p>
+                                <FaCircle className="text-green-500 lg:text-[7px] md:text-[5px] text-[2px] drop-shadow-sm drop-shadow-green-500" />
+                                <p className="text-neutral-400 lg:text-xs md:text-[10px] text-[5px]">Available for work</p>
                             </div>
                         </div>
                     </div>
-                    <div className='flex gap-4 text-nowrap'>
+                    <div className='flex lg:gap-4 md:gap-3 gap-2 text-nowrap'>
                         <motion.a
                             href="mailto:artistbansal2004@gmail.com"
                             target="_blank"
                             whileHover={{ scale: 1.5 }}
                             whileTap={{ scale: 0.95 }}
-                            className="text-white flex gap-1 items-center rounded-full text-3xl"
+                            className="text-white flex gap-1 items-center rounded-full lg:text-3xl md:text-xl text-[10px]"
                         >
                             <SiGmail />
                         </motion.a>
@@ -89,7 +71,7 @@ function Home() {
                             href="tel:+917009250361"
                             whileHover={{ scale: 1.5 }}
                             whileTap={{ scale: 0.95 }}
-                            className="text-white flex gap-1 items-center rounded-full text-2xl"
+                            className="text-white flex gap-1 items-center rounded-full lg:text-3xl md:text-xl text-[10px]"
                         >
                             <FaPhone />
                         </motion.a>
@@ -100,7 +82,7 @@ function Home() {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="text-white flex gap-1 items-center bg-neutral-700 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-amber-400 hover:text-neutral-800"
+                            className="text-white lg:text-xl md:text-sm text-[8px] flex gap-1 items-center bg-neutral-700 lg:px-4 px-2 lg:py-2 md:py-1 rounded-full transition-colors duration-300 hover:bg-amber-400 hover:text-neutral-800"
                         >
                             <FaDownload />
                             <p>Download CV</p>
@@ -110,12 +92,7 @@ function Home() {
 
                 {/* Social Panel */}
                 <motion.div
-                    variants={{
-                        initial: { x: 0, opacity: 0 }, // Start off-screen to the right
-                        hovered: { x: 0, opacity: 1 }, // Slide in when hovered
-                    }}
-                    transition={{ duration: 0.3 }}
-                    className="flex flex-col h-full p-5 rounded-r-2xl text-xl bg-neutral-800 gap-4 text-neutral-400"
+                    className="flex flex-col h-full lg:p-5 md:p-3 p-1.5 lg:rounded-r-2xl rounded-r-lg lg:text-xl md:text-lg text-[8px] bg-neutral-800 lg:gap-4 md:gap-2 gap-1.5 text-neutral-400"
                 >
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/akshit-bansal11">
                         <FaGithub className='hover:text-white' />
@@ -136,9 +113,9 @@ function Home() {
             </motion.div>
 
             {/* About Section */}
-            <ScrollSection id = 'about' className = "flex flex-col gap-2 bg-neutral-800 p-5 rounded-2xl">
-                <h1 className = "text-2xl mb-3 text-white">About Me</h1>
-                <div className = "flex flex-col text-pretty gap-2 text-neutral-300">
+            <ScrollSection id = 'about' className = "flex flex-col lg:gap-3 bg-neutral-800 p-5 rounded-2xl">
+                <h1 className = "lg:text-2xl md:text-lg text-sm text-white">About Me</h1>
+                <div className = "flex flex-col lg:text-lg md:text-sm text-[8px] text-pretty gap-2 text-neutral-300">
                     <p>
                         Hi, I’m Akshit Bansal — a full-stack developer who enjoys building thoughtful, practical web experiences. I like solving real problems with clean, efficient code and turning ideas into things people can actually use.
                     </p>
@@ -152,15 +129,15 @@ function Home() {
             </ScrollSection>
 
             {/* Projects Section */}
-            <ScrollSection id = 'projects' className = "flex flex-col gap-2 bg-neutral-800 p-5 rounded-2xl w-full">
+            <ScrollSection id = 'projects' className = "flex flex-col gap-2 bg-neutral-800 lg:p-5 md:p-3 p-1.5 lg:rounded-2xl md:rounded-xl rounded-lg w-full">
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl mb-3 text-white">Some Of My Projects</h1>
+                    <h1 className = "lg:text-2xl md:text-lg text-sm text-white">Some Of My Projects</h1>
                     <NavButton to = "/projects" >
                         <p>See More</p>                 
                         <GoArrowUpRight />    
                     </NavButton>
                 </div>
-                <div className='flex gap-20 p-10 justify-evenly'>
+                <div className='flex lg:gap-20 md:gap-10 gap-5 lg:p-10 md:p-5 p-1.5 justify-evenly'>
                     <ProjectCard
                         title = 'Medishare'
                         description = 'MediShare is a donation-based platform that connects medicine donors with people in need through a secure and verified system.'
@@ -181,11 +158,11 @@ function Home() {
             {/* Experience Section */}
             <ScrollSection id = 'experience' className='flex flex-col gap-4 bg-neutral-800 rounded-2xl p-8 w-full '>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl mb-3 text-white">Experience</h1>
+                    <h1 className = "text-2xl text-white">Experience</h1>
                 </div>
                 <div>
                     <div className = "flex justify-between w-full">
-                        <h1 className = "text-lg mb-3 text-white">Internship</h1>
+                        <h1 className = "text-lg text-white">Internship</h1>
                     </div>
                     <ExpItem
                         location= 'Remote'
@@ -201,7 +178,7 @@ function Home() {
                 </div>
                 <div className='flex flex-col gap-2'>
                     <div className = "flex justify-between w-full">
-                        <h1 className = "text-lg mb-3 text-white">Training</h1>
+                        <h1 className = "text-lg text-white">Training</h1>
                     </div>
                     <ExpItem
                         location= 'Punjab, India'
@@ -242,7 +219,7 @@ function Home() {
             {/* Skills Sections */}
             <ScrollSection id = 'skills' className='flex flex-col gap-2 bg-neutral-800 rounded-2xl p-8 w-full '>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl mb-3 text-white">Skills</h1>
+                    <h1 className = "text-2xl text-white">Skills</h1>
                 </div>
                 <div className='flex flex-col gap-2'>
                     {skills.map((section, index) => (
@@ -254,7 +231,7 @@ function Home() {
             {/* Achievments & Certifications Sections */}
             <ScrollSection id = 'certif' className='flex flex-col gap-8 bg-neutral-800 rounded-2xl p-8 w-full '>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl mb-3 text-white">Achievements & Certifications</h1>
+                    <h1 className = "text-2xl text-white">Achievements & Certifications</h1>
                 </div>
                 <div className='flex flex-col gap-4'>
                     <h1 className='text-xl text-neutral-400'>Achievements</h1>
@@ -278,7 +255,7 @@ function Home() {
             {/* Education Section */}
             <ScrollSection id = 'education' className='flex flex-col gap-2 bg-neutral-800 rounded-2xl p-8 w-full '>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "text-2xl mb-3 text-white">Education</h1>
+                    <h1 className = "text-2xl text-white">Education</h1>
                 </div>
                 <EduItem
                     location= 'Punjab, India'

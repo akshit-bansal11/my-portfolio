@@ -27,7 +27,7 @@ export default function NavBar({ page = 'home' }) {
 
     // Render
     return (
-        <nav className="sticky flex items-center justify-center w-min px-5 py-3 bg-neutral-800 rounded-full shadow-md">
+        <nav className="flex items-center w-full justify-center lg:w-min px-5 py-3 bg-neutral-800 rounded-2xl shadow-md">
             {/* Navigation Links */}
             <NavLinks
                 links={navItems.map((item) => ({
@@ -40,8 +40,6 @@ export default function NavBar({ page = 'home' }) {
 
                 }))}
 
-                direction="row" // Horizontal layout
-                
                 className="gap-4" // Spacing between links
             
             />

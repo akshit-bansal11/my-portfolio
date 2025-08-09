@@ -62,7 +62,7 @@ export default function NavButton({
             
             whileTap={{ scale: 0.95 }} // Scale down on tap
             
-            className={`flex items-center gap-2 text-white text-nowrap ${className}`}
+            className={`flex items-center gap-2 text-white text-[8px] md:text-sm lg:text-lg lg:text-nowrap md:text-nowrap ${className}`}
             
         >
             {children || text} {/* Render children or fallback to text */}

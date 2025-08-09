@@ -11,8 +11,6 @@ export default function NavLinks({
 
     links = [], // Array of link objects with text, to, onClick, icon, and className
 
-    direction = 'col', // Flex direction: 'col' (column) or 'row'
-
     className = '', // Additional CSS classes for the list
 
 }) {
@@ -20,7 +18,7 @@ export default function NavLinks({
     return (
         <motion.ul
 
-            className={`flex flex-${direction} gap-8 ${className}`}
+            className={`flex lg:flex-row w-full justify-center items-center lg:flex-nowrap md:flex-row flex-col md:flex-wrap gap-x-8 ${className}`}
 
             initial={{ opacity: 0 }} // Initial opacity for animation
 
