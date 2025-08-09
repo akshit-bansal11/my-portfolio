@@ -32,7 +32,7 @@ import cssbhack from '../assets/certificates/cssbhack.png'
 
 function Home() {
     return (
-        <div className = "flex w-full flex-col gap-10 items-center">
+        <div className = "flex w-full flex-col lg:gap-10 md:gap-7 gap-4 items-center">
 
             <motion.div
                 className="flex gap-1 items-center w-full lg:h-50 md:h-35 h-20 justify-center" // Center the container
@@ -113,8 +113,8 @@ function Home() {
             </motion.div>
 
             {/* About Section */}
-            <ScrollSection id = 'about' className = "flex flex-col lg:gap-3 bg-neutral-800 p-5 rounded-2xl">
-                <h1 className = "lg:text-2xl md:text-lg text-sm text-white">About Me</h1>
+            <ScrollSection id = 'about' className = "flex flex-col gap-2 bg-neutral-800 lg:p-5 md:p-3 p-1.5 lg:rounded-2xl md:rounded-xl rounded-lg w-full">
+                <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">About Me</h1>
                 <div className = "flex flex-col lg:text-lg md:text-sm text-[8px] text-pretty gap-2 text-neutral-300">
                     <p>
                         Hi, I’m Akshit Bansal — a full-stack developer who enjoys building thoughtful, practical web experiences. I like solving real problems with clean, efficient code and turning ideas into things people can actually use.

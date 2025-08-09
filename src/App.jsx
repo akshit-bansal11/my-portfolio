@@ -21,7 +21,7 @@ function AppContent() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center gap-10">
+    <div className="flex flex-col justify-center items-center lg:gap-10 md:gap-7 gap-4">
       <NavBar page={page} />
 
       <Routes>
