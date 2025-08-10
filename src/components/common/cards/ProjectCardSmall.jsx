@@ -1,9 +1,9 @@
 // src/components/ProjectCardSmall.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Button from './Button';
+import Button from '../buttons/PrimaryButton';
 
-const ProjectCardSmall = ({ title, description, githubLink, techStack = [] }) => {
+const ProjectCardSmall = ({ title, description, image, iframe, demoLink, githubLink, techStack = [] }) => {
   const [tapEnabled, setTapEnabled] = useState(false);
 
   const handleCardClick = () => {
@@ -24,6 +24,20 @@ const ProjectCardSmall = ({ title, description, githubLink, techStack = [] }) =>
       onClick={handleCardClick}
       className="group bg-neutral-700 border-2 border-neutral-700 p-3 gap-3 rounded-2xl flex flex-col w-[90%]"
     >
+      {/* Image Preview */}
+      <motion.div initial = {{z: 0}} whileHover = {{scale: 2.5, z: 2}} className="relative overflow-hidden">
+        {iframe ? (
+            <iframe width="100%" height="10" src={iframe} className='opacity-60 object-contain group-hover:opacity-100 rounded-xl w-full h-60 transition-all duration-200 m-auto'></iframe>
+          ) : (
+            <img
+            src={image}
+            alt={`${title} preview`}
+            className="opacity-60 group-hover:opacity-100 rounded-xl w-full h-45 object-cover transition-all duration-200 m-auto"
+            />
+          )
+        }
+      </motion.div>
+
       {/* Title & Description */}
       <div className="flex flex-col gap-2 px-1 text-left">
         <h2 className="text-white text-xl font-semibold">{title}</h2>
@@ -41,6 +55,13 @@ const ProjectCardSmall = ({ title, description, githubLink, techStack = [] }) =>
 
       {/* Buttons */}
       <div className="flex justify-start gap-3">
+        {demoLink && (
+          <Button
+            className="bg-neutral-300 text-neutral-900 px-2 hover:bg-white"
+            onClick={() => window.open(demoLink, '_blank')}
+            text="Demo"
+          />
+        )}
         {githubLink && (
           <Button
             className="bg-neutral-300 text-neutral-900 px-2 hover:bg-white"

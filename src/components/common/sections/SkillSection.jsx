@@ -1,6 +1,6 @@
 // components/SkillSection.jsx
 import React from "react";
-import SkillItem from "./SkillItem";
+import SkillItem from "../cards/SkillItem";
 
 const SkillSection = ({ title, skills }) => (
     <div className="flex flex-col gap-2">

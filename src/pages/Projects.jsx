@@ -3,10 +3,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 // Compoents
-import ScrollSection from '../components/common/ScrollSection'
-import ProjectCard from '../components/common/ProjectCard'
-import ProjectCardSmall from '../components/common/ProjectCardSmall'
-import ProjectCardSmallWimg from '../components/common/ProjectCardSmallWimg'
+import ScrollSection from '../components/common/sections/ScrollSection'
+import ProjectCard from '../components/common/cards/ProjectCard'
+import ProjectCardSmall from '../components/common/cards/ProjectCardSmall'
+import ProjectCardSmallWimg from '../components/common/cards/ProjectCardSmallWimg'
 
 // Images
 import Inf from '../assets/projects/Websites/influera.png'
@@ -115,6 +115,13 @@ function Projects() {
                     <ProjectCardSmall
                         title="Audio Visualizer"
                         description="A Real-Time Audio Visualizer built with C# & .NET. Visualizes the audio from all sources and from any audio device connected to the system."
+                        image={code}
+                        techStack={['C#', '.NET']}
+                        githubLink="https://github.com/akshit-bansal11/audio-visualizer"
+                    />
+                    <ProjectCardSmall
+                        title="Color Picker"
+                        description="A simple color picker tool built with React and Tailwind. Pick colors and get the code in HEX, RGB, RGBA and Tailwind formats."
                         image={code}
                         techStack={['C#', '.NET']}
                         githubLink="https://github.com/akshit-bansal11/audio-visualizer"

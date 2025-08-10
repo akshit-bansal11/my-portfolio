@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components
-import NavLinks from '../common/NavLinks';
+import NavLinks from '../common/sections/NavLinks';
 
 // Config
 import { navConfigs } from '../../config/NavConfig';
@@ -27,7 +27,7 @@ export default function NavBar({ page = 'home' }) {
 
     // Render
     return (
-        <nav className="flex items-center w-full justify-center lg:w-min px-5 py-3 bg-neutral-800 rounded-2xl shadow-md">
+        <nav className="flex items-center w-full justify-center lg:w-min px-5 py-3 bg-neutral-400/10 rounded-2xl">
             {/* Navigation Links */}
             <NavLinks
                 links={navItems.map((item) => ({

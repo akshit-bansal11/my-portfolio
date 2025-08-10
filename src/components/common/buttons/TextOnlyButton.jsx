@@ -3,9 +3,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-// Button Component
-// A reusable button with navigation and animation support
-export default function Button({
+// NavButton Component
+// A reusable navigation button with routing and smooth scrolling support
+export default function NavButton({
 
     onClick = null, // Custom click handler
 
@@ -17,8 +17,6 @@ export default function Button({
 
     type = 'button', // Button type (e.g., 'button', 'submit')
 
-    icon = null, // Optional icon element
-
     text = 'Button', // Default button text
 
 }) {
@@ -28,7 +26,7 @@ export default function Button({
 
     // Handle button click behavior
     const handleClick = (e) => {
-
+    
         // Execute custom onClick if provided
         if (onClick) {
             onClick(e);
@@ -60,14 +58,13 @@ export default function Button({
             
             onClick={handleClick}
             
-            whileHover={{ scale: 1.05 }} // Scale up on hover
+            whileHover={{ scale: 1.1 }} // Scale up on hover
             
             whileTap={{ scale: 0.95 }} // Scale down on tap
             
-            className={`flex items-center justify-center gap-2 rounded-full ${className}`}
+            className={`flex items-center gap-2 text-white lg:text-neutral-300 lg:hover:text-shadow-md lg:text-shadow-white/10 lg:transition-colors lg:duration-100 lg:hover:text-neutral-100 text-[8px] cursor-pointer md:text-sm lg:text-lg lg:text-nowrap md:text-nowrap ${className}`}
             
         >
-            {icon && <span className="text-xs">{icon}</span>}
             {children || text} {/* Render children or fallback to text */}
         </motion.button>
     );

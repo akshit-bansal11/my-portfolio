@@ -2,16 +2,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLocationDot, FaCircle, FaGithub, FaLinkedinIn, FaDownload, FaXTwitter, FaHackerrank, FaPhone } from 'react-icons/fa6';
-import { SiGmail, SiLeetcode } from "react-icons/si";
+import { SiCplusplus, SiGmail, SiLeetcode, SiCoursera } from "react-icons/si";
 import { GoArrowUpRight } from "react-icons/go";
 
 // Components
-import ScrollSection from '../components/common/ScrollSection'
-import NavButton from '../components/common/NavButton';
-import ProjectCard from '../components/common/ProjectCard';
-import ExpItem from '../components/common/ExpItem';
-import EduItem from '../components/common/EduItem';
-import SkillSection from '../components/common/SkillSection';
+import ScrollSection from '../components/common/sections/ScrollSection'
+import NavButton from '../components/common/buttons/TextOnlyButton.jsx';
+import ProjectCard from '../components/common/cards/ProjectCard.jsx';
+import ExpItem from '../components/common/cards/ExpItem.jsx';
+import EduItem from '../components/common/cards/EduItem.jsx';
+import SkillSection from '../components/common/sections/SkillSection';
+import Certificate from '../components/common/cards/Certificate.jsx';
+import ScrollSectionHeading from '../components/common/headings/ScrollSectionHeading.jsx';
 
 // Config
 import { skills } from '../config/SkillsConfig.js';
@@ -29,6 +31,7 @@ import ceiga from '../assets/certificates/ceiga.png'
 import sqlbhack from '../assets/certificates/sqlbhack.png'
 import jsbhack from '../assets/certificates/jsbhack.png'
 import cssbhack from '../assets/certificates/cssbhack.png'
+import SkillBadge from '../components/common/cards/SkillBadge.jsx';
 
 function Home() {
     return (
@@ -38,14 +41,14 @@ function Home() {
                 className="flex gap-1 items-center w-full lg:h-50 md:h-35 h-20 justify-center" // Center the container
             >
                 <motion.div
-                    className="lg:w-4xl w-full h-full flex items-end justify-between bg-neutral-800 lg:p-5 md:p-3 p-2 lg:rounded-l-2xl rounded-l-lg"
+                    className="lg:w-4xl w-full h-full flex items-end justify-between bg-neutral-400/10 lg:p-5 md:p-3 p-2 lg:rounded-l-2xl rounded-l-lg"
                 >
                     <div className="flex lg:gap-4 md:gap-3 gap-1.5 h-full items-center">
                         <img src={Pfp} className="h-full rounded-sm md:rounded-lg lg:rounded-xl" alt="Profile" />
                         <div className="flex flex-col lg:gap-8 md:gap-5 gap-2justify-between">
                             <div>
-                                <h1 className="lg:text-3xl md:text-xl text-[10px] text-white font-sans">Akshit Bansal</h1>
-                                <h2 className="lg:text-lg md:text-sm text-[8px] text-neutral-400 font-sans">MERN-Stack Developer | UI, UX and Graphics Designer</h2>
+                                <h1 className="lg:text-3xl md:text-xl text-[10px] text-white">AKSHIT BANSAL</h1>
+                                <h2 className="lg:text-lg md:text-sm text-[8px] text-nowrap text-neutral-400">MERN-Stack Developer | UI, UX and Graphics Designer</h2>
                                 <div className="flex lg:text-xl md:text-sm text-[8px] gap-1 text-neutral-400 items-center">
                                     <FaLocationDot className='lg:text-lg md:text-xs text-[6px]' />
                                     <p>Punjab, India</p>
@@ -92,7 +95,7 @@ function Home() {
 
                 {/* Social Panel */}
                 <motion.div
-                    className="flex flex-col h-full lg:p-5 md:p-3 p-1.5 lg:rounded-r-2xl rounded-r-lg lg:text-xl md:text-lg text-[8px] bg-neutral-800 lg:gap-4 md:gap-2 gap-1.5 text-neutral-400"
+                    className="flex flex-col h-full lg:p-5 md:p-3 p-1.5 lg:rounded-r-2xl rounded-r-lg lg:text-xl md:text-lg text-[8px] bg-neutral-400/10 lg:gap-4 md:gap-2 gap-1.5 text-neutral-400"
                 >
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/akshit-bansal11">
                         <FaGithub className='hover:text-white' />
@@ -114,8 +117,8 @@ function Home() {
 
             {/* About Section */}
             <ScrollSection id = 'about'>
-                <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">About Me</h1>
-                <div className = "flex flex-col lg:text-lg md:text-sm text-[8px] text-pretty gap-2 text-neutral-300">
+                <ScrollSectionHeading heading="about me"/>
+                <div className = "flex flex-col lg:text-lg md:text-sm text-[8px] gap-2 text-neutral-400">
                     <p>
                         Hi, I’m Akshit Bansal — a full-stack developer who enjoys building thoughtful, practical web experiences. I like solving real problems with clean, efficient code and turning ideas into things people can actually use.
                     </p>
@@ -131,13 +134,13 @@ function Home() {
             {/* Projects Section */}
             <ScrollSection id = 'projects'>
                 <div className = "flex justify-between w-full">
-                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Some of My Projects</h1>
+                    <ScrollSectionHeading heading = "projects" />
                     <NavButton to = "/projects" >
                         <p>See More</p>                 
                         <GoArrowUpRight />    
                     </NavButton>
                 </div>
-                <div className='flex lg:gap-20 md:gap-10 gap-5 lg:p-10 md:p-5 p-1.5 justify-evenly'>
+                <div className='flex lg:flex-row flex-col gap-2 lg:justify-around justify-center items-center'>
                     <ProjectCard
                         title = 'Medishare'
                         description = 'MediShare is a donation-based platform that connects medicine donors with people in need through a secure and verified system.'
@@ -157,13 +160,9 @@ function Home() {
 
             {/* Experience Section */}
             <ScrollSection id = 'experience'>
-                <div className = "flex justify-between w-full">
-                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Experience</h1>
-                </div>
-                <div>
-                    <div className = "flex justify-between w-full">
-                        <h1 className = "lg:text-2xl md:text-lg text-[8px] text-neutral-400">Internship</h1>
-                    </div>
+                <ScrollSectionHeading heading = "experience" />
+                <div className='flex flex-col gap-2'>
+                    <h1 className = "lg:text-2xl md:text-lg text-[8px] text-neutral-400">Internship</h1>
                     <ExpItem
                         location= 'Remote'
                         company = 'Bluestock Fintech'
@@ -177,9 +176,7 @@ function Home() {
                     />
                 </div>
                 <div className='flex flex-col gap-2'>
-                    <div className = "flex justify-between w-full">
-                        <h1 className = "lg:text-2xl md:text-lg text-[8px] text-neutral-400">Training</h1>
-                    </div>
+                    <h1 className = "lg:text-2xl md:text-lg text-[8px] text-neutral-400">Training</h1>
                     <ExpItem
                         location= 'Punjab, India'
                         company = 'Bangalore Computer Education'
@@ -218,9 +215,7 @@ function Home() {
 
             {/* Skills Sections */}
             <ScrollSection id = 'skills'>
-                <div className = "flex justify-between w-full">
-                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Skills</h1>
-                </div>
+                <ScrollSectionHeading heading = "skills" />
                 <div className='flex flex-col gap-2'>
                     {skills.map((section, index) => (
                         <SkillSection key={index} title={section.title} skills={section.skills} />
@@ -230,33 +225,29 @@ function Home() {
 
             {/* Achievments & Certifications Sections */}
             <ScrollSection id = 'certif'>
-                <div className = "flex justify-between w-full">
-                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Achievements & Certifications</h1>
-                </div>
+                <ScrollSectionHeading heading = "certifications & achievements" />
                 <div className='flex flex-col gap-4'>
-                    <h1 className='text-xl text-neutral-400'>Achievements</h1>
+                    <h1 className='lg:text-xl md:text-sm text-xs text-neutral-400'>Achievements</h1>
                     <div className='flex gap-4'>
-                        <motion.img whileHover={{scale: 2, translateX: 50}} className='w-20' src={cppBadge} alt="" />
-                        <motion.img whileHover={{scale: 2, translateX: 50}} className='w-20' src={cBadge} alt="" />
+                        <SkillBadge name='C++' icon = {<SiCplusplus />} stars = {5}/>
+                        <SkillBadge name='C' icon = {<SiCoursera />} stars = {2}/>
                     </div>
                 </div>
                 <div className='flex flex-col gap-4'>
-                    <h1 className='text-xl text-neutral-400'>Certifications</h1>
+                    <h1 className='lg:text-xl md:text-sm text-xs text-neutral-400'>Certifications</h1>
                     <div className='grid grid-cols-3 gap-4'>
-                        <motion.img initial = {{opacity: 0.5, zIndex: 0}} whileHover = {{scale: 2, opacity: 1, zIndex: 2}} className='rounded-2xl' src={ceisd} alt="" />
-                        <motion.img initial = {{opacity: 0.5, zIndex: 0}} whileHover = {{scale: 2, opacity: 1, zIndex: 2}} className='rounded-2xl' src={ceiga} alt="" />
-                        <motion.img initial = {{opacity: 0.5, zIndex: 0}} whileHover = {{scale: 2, opacity: 1, zIndex: 2}} className='rounded-2xl' src={sqlbhack} alt="" />
-                        <motion.img initial = {{opacity: 0.5, zIndex: 0}} whileHover = {{scale: 2, opacity: 1, zIndex: 2}} className='rounded-2xl' src={jsbhack} alt="" />
-                        <motion.img initial = {{opacity: 0.5, zIndex: 0}} whileHover = {{scale: 2, opacity: 1, zIndex: 2}} className='rounded-2xl' src={cssbhack} alt="" />
+                        <Certificate certificate={ceisd} link="a.com"/>
+                        <Certificate certificate={ceiga} link="a.com"/>
+                        <Certificate certificate={sqlbhack} link="a.com"/>
+                        <Certificate certificate={jsbhack} link="a.com"/>
+                        <Certificate certificate={cssbhack} link="a.com"/>
                     </div>
                 </div>
             </ScrollSection>
 
             {/* Education Section */}
             <ScrollSection id = 'education'>
-                <div className = "flex justify-between w-full">
-                    <h1 className = "lg:text-2xl md:text-lg text-[10px] text-white">Education</h1>
-                </div>
+                <ScrollSectionHeading heading = "education" />
                 <EduItem
                     location= 'Punjab, India'
                     company = 'Maharaja Ranjit Singh Punjab Technical University'

@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Components
-import NavButton from './NavButton';
+import NavButton from '../buttons/TextOnlyButton';
 
 // NavLinks Component
 // A reusable list of navigation buttons with customizable layout and animation
