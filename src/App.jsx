@@ -9,6 +9,16 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import DotGrid from './components/backgrounds/Dotgrid';
 
+function getDeviceType() {
+  const ua = navigator.userAgent;
+  const width = window.innerWidth;
+
+  // Basic width-based detection
+  if (width <= 767) return 'phone';
+  if (width <= 1024) return 'tablet';
+  return 'laptop';
+}
+
 function AppContent() {
   const location = useLocation();
   const path = location.pathname;
@@ -24,13 +34,28 @@ function AppContent() {
 
   return (
     <motion.div
-      className="flex flex-col font-thin justify-center items-center lg:gap-10 md:gap-7 gap-4 min-h-screen"
+      className="flex flex-col lg:font-thin font-medium justify-center items-center lg:gap-10 md:gap-7 gap-4 min-h-screen"
       style={{ minHeight: '100vh', height: '100%', position: 'relative' }}
     >
       <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
-        <div className="relative h-full w-full bg-neutral-900">
-          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#bdbdbd18_1px,transparent_1px),linear-gradient(to_bottom,#bdbdbd18_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-        </div>
+        {getDeviceType() === 'phone' || getDeviceType() === 'tablet' ?
+        (
+          <div className="relative h-full w-full bg-neutral-900">
+            <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#bdbdbd18_1px,transparent_1px),linear-gradient(to_bottom,#bdbdbd18_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+          </div>
+        ) : (
+          <DotGrid
+            dotSize={2}
+            gap={20}
+            baseColor="#565656"
+            activeColor="ffffff"
+            proximity={120}
+            shockRadius={250}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          />
+        )}
       </div>
       <NavBar page={page} />
 

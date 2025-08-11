@@ -18,7 +18,7 @@ export default function NavLinks({
     return (
         <motion.ul
 
-            className={`flex lg:flex-row w-full justify-center items-center lg:flex-nowrap md:flex-row flex-col md:flex-wrap gap-x-8 ${className}`}
+            className={`flex w-full justify-center items-center lg:flex-nowrap md:flex-row flex-col md:flex-wrap gap-x-8 ${className}`}
 
             initial={{ opacity: 0 }} // Initial opacity for animation
 

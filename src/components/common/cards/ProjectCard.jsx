@@ -11,7 +11,7 @@ const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, 
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.05, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2)' }}
       whileTap={tapEnabled ? { scale: 0.97 } : {}}
-      className={`group bg-neutral-400/10 border border-neutral-600 lg:p-5 md:p-3 p-1.5 lg:gap-4 md:gap-2 gap-1.5 rounded-2xl flex flex-col w-full transition-colors duration-300
+      className={`group bg-neutral-600/20 border border-neutral-600 p-3 lg:gap-4 md:gap-2 gap-1.5 rounded-2xl flex flex-col w-full transition-colors duration-300
       }`}
     >
       {/* Image Preview */}
@@ -37,7 +37,7 @@ const ProjectCard = ({ title, description, image, iframe, demoLink, designLink, 
       {/* Title & Description */}
       <div className="flex flex-col gap-3 px-2 text-start sm:text-left">
         <h2 className="text-white lg:text-2xl md:text-lg text-sm font-thin tracking-tight">{title}</h2>
-        <p className="text-neutral-400 lg:text-lg md:text-sm font-thin text-[8px] line-clamp-3">{description}</p>
+        <p className="lg:text-neutral-400 text-white lg:text-lg md:text-sm font-thin text-[8px] line-clamp-3">{description}</p>
       </div>
 
       {/* Tech Stack */}

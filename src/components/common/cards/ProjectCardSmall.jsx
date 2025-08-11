@@ -22,17 +22,17 @@ const ProjectCardSmall = ({ title, description, image, iframe, demoLink, githubL
       whileHover={{ scale: 1.05 }}
       whileTap={tapEnabled ? { scale: 0.97 } : {}} // Only animate if GitHub link exists
       onClick={handleCardClick}
-      className="group bg-neutral-700 border-2 border-neutral-700 p-3 gap-3 rounded-2xl flex flex-col w-[90%]"
+      className="group lg:bg-neutral-600/20 bg-neutral-400/10 border-2 border-neutral-700 p-3 gap-3 rounded-2xl flex flex-col w-full"
     >
       {/* Image Preview */}
-      <motion.div initial = {{z: 0}} whileHover = {{scale: 2.5, z: 2}} className="relative overflow-hidden">
+      <motion.div className="relative overflow-hidden">
         {iframe ? (
             <iframe width="100%" height="10" src={iframe} className='opacity-60 object-contain group-hover:opacity-100 rounded-xl w-full h-60 transition-all duration-200 m-auto'></iframe>
           ) : (
             <img
             src={image}
             alt={`${title} preview`}
-            className="opacity-60 group-hover:opacity-100 rounded-xl w-full h-45 object-cover transition-all duration-200 m-auto"
+            className="opacity-60 group-hover:opacity-100 aspect-video rounded-xl object-cover transition-all duration-200 m-auto"
             />
           )
         }

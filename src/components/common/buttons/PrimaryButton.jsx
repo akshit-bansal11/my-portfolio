@@ -64,7 +64,7 @@ export default function Button({
             
             whileTap={{ scale: 0.95 }} // Scale down on tap
             
-            className={`flex items-center justify-center gap-2 cursor-pointer bg-neutral-300 text-neutral-900 px-2 lg:text-lg md:text-sm text-[8px] hover:bg-white rounded-lg transition-colors duration-200 ${className}`}
+            className={`flex items-center justify-center gap-2 cursor-pointer bg-neutral-300 text-neutral-900 px-2 py-[2px] lg:text-lg md:text-sm text-[8px] hover:bg-white rounded-xl transition-colors duration-200 ${className}`}
             
         >
             {icon && <span className="text-xs">{icon}</span>}
