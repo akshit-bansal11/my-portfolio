@@ -35,16 +35,16 @@ import { skills } from '../config/SkillsConfig.js';
 // ──────────────────────────────────────────────
 // Assets
 // ──────────────────────────────────────────────
-import Pfp from '../assets/images/pfp.jpg';
-import Inf from '../assets/projects/Websites/influera.png';
-import Med from '../assets/projects/Websites/mediShare.png';
+import Pfp from '../assets/images/pfp.webp';
+import Inf from '../assets/projects/Websites/influera.webp';
+import Med from '../assets/projects/Websites/mediShare.webp';
 
 // Badges & Certificates
-import ceisd from '../assets/certificates/ceisd.png';
-import ceiga from '../assets/certificates/ceiga.png';
-import sqlbhack from '../assets/certificates/sqlbhack.png';
-import jsbhack from '../assets/certificates/jsbhack.png';
-import cssbhack from '../assets/certificates/cssbhack.png';
+import ceisd from '../assets/certificates/ceisd.webp';
+import ceiga from '../assets/certificates/ceiga.webp';
+import sqlbhack from '../assets/certificates/sqlbhack.webp';
+import jsbhack from '../assets/certificates/jsbhack.webp';
+import cssbhack from '../assets/certificates/cssbhack.webp';
 
 function ProfileHeader() {
     return (

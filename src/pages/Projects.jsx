@@ -16,21 +16,21 @@ import ScrollSectionHeading from '../components/common/headings/ScrollSectionHea
 // ──────────────────────────────────────────────
 // Images
 // ──────────────────────────────────────────────
-import Inf from '../assets/projects/Websites/influera.png'
-import Med from '../assets/projects/Websites/mediShare.png'
-import rps from '../assets/projects/Games/rps.png'
-import drumKit from '../assets/projects/Games/drumKit.png'
-import ticTacToe from '../assets/projects/Games/ttt.png'
-import mem from '../assets/projects/Games/memory.png'
-import calc from '../assets/projects/Tools/calc.png'
-import adclock from '../assets/projects/Tools/adclock.png'
-import todo from '../assets/projects/Tools/todo.png'
-import barClock from '../assets/projects/Tools/barClock.png'
-import count from '../assets/projects/Tools/count.png'
-import dclock from '../assets/projects/Tools/dclock.png'
-import code from '../assets/projects/code.png'
-import ipo from '../assets/designs/ipo.png'
-import ecom from '../assets/designs/ecom.png'
+import Inf from '../assets/projects/Websites/influera.webp'
+import Med from '../assets/projects/Websites/mediShare.webp'
+import rps from '../assets/projects/Games/rps.webp'
+import drumKit from '../assets/projects/Games/drumKit.webp'
+import ticTacToe from '../assets/projects/Games/ttt.webp'
+import mem from '../assets/projects/Games/memory.webp'
+import calc from '../assets/projects/Tools/calc.webp'
+import adclock from '../assets/projects/Tools/adclock.webp'
+import todo from '../assets/projects/Tools/todo.webp'
+import barClock from '../assets/projects/Tools/barClock.webp'
+import count from '../assets/projects/Tools/count.webp'
+import dclock from '../assets/projects/Tools/dclock.webp'
+import code from '../assets/projects/code.webp'
+import ipo from '../assets/designs/ipo.webp'
+import ecom from '../assets/designs/ecom.webp'
 
 // ──────────────────────────────────────────────
 // Animation variants for section entry
