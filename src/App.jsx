@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import NavBar from './components/layout/NavBar';
-import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import DotGrid from './components/backgrounds/Dotgrid';
@@ -80,7 +79,6 @@ function AppContent() {
         <Route path="/projects" element={<Projects />} />
       </Routes>
 
-      <Footer />
     </motion.div>
   );
 
