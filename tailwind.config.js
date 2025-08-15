@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -13,7 +13,11 @@ export default {
     extend: {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
+        chillax: ['Chillax', 'sans-serif']
       },
+      animation: {
+        border: 'border 4s linear infinite'
+      }
     },
   },
   plugins: [],

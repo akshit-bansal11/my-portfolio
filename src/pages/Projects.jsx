@@ -16,21 +16,21 @@ import ScrollSectionHeading from '../components/common/headings/ScrollSectionHea
 // ──────────────────────────────────────────────
 // Images
 // ──────────────────────────────────────────────
-import Inf from '../assets/projects/Websites/influera.webp'
-import Med from '../assets/projects/Websites/mediShare.webp'
-import rps from '../assets/projects/Games/rps.webp'
-import drumKit from '../assets/projects/Games/drumKit.webp'
-import ticTacToe from '../assets/projects/Games/ttt.webp'
-import mem from '../assets/projects/Games/memory.webp'
-import calc from '../assets/projects/Tools/calc.webp'
-import adclock from '../assets/projects/Tools/adclock.webp'
-import todo from '../assets/projects/Tools/todo.webp'
-import barClock from '../assets/projects/Tools/barClock.webp'
-import count from '../assets/projects/Tools/count.webp'
-import dclock from '../assets/projects/Tools/dclock.webp'
-import code from '../assets/projects/code.webp'
-import ipo from '../assets/designs/ipo.webp'
-import ecom from '../assets/designs/ecom.webp'
+import Inf from '../assets/images/projects/Websites/influera.webp'
+import Med from '../assets/images/projects/Websites/mediShare.webp'
+import rps from '../assets/images/projects/Games/rps.webp'
+import drumKit from '../assets/images/projects/Games/drumKit.webp'
+import ticTacToe from '../assets/images/projects/Games/ttt.webp'
+import mem from '../assets/images/projects/Games/memory.webp'
+import calc from '../assets/images/projects/Tools/calc.webp'
+import adclock from '../assets/images/projects/Tools/adclock.webp'
+import todo from '../assets/images/projects/Tools/todo.webp'
+import barClock from '../assets/images/projects/Tools/barClock.webp'
+import count from '../assets/images/projects/Tools/count.webp'
+import dclock from '../assets/images/projects/Tools/dclock.webp'
+import code from '../assets/images/projects/code.webp'
+import ipo from '../assets/images/designs/ipo.webp'
+import ecom from '../assets/images/designs/ecom.webp'
 
 // ──────────────────────────────────────────────
 // Animation variants for section entry

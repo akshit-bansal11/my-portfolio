@@ -26,6 +26,7 @@ import SkillSection from '../components/common/sections/SkillSection';
 import Certificate from '../components/common/cards/Certificate.jsx';
 import ScrollSectionHeading from '../components/common/headings/ScrollSectionHeading.jsx';
 import SkillBadge from '../components/common/cards/SkillBadge.jsx';
+import ProfileHeader from '../components/layout/ProfileHeader.jsx';
 
 // ──────────────────────────────────────────────
 // Config
@@ -35,123 +36,15 @@ import { skills } from '../config/SkillsConfig.js';
 // ──────────────────────────────────────────────
 // Assets
 // ──────────────────────────────────────────────
-import Pfp from '../assets/images/pfp.webp';
-import Inf from '../assets/projects/Websites/influera.webp';
-import Med from '../assets/projects/Websites/mediShare.webp';
+import Inf from '../assets/images/projects/Websites/influera.webp';
+import Med from '../assets/images/projects/Websites/mediShare.webp';
 
 // Badges & Certificates
-import ceisd from '../assets/certificates/ceisd.webp';
-import ceiga from '../assets/certificates/ceiga.webp';
-import sqlbhack from '../assets/certificates/sqlbhack.webp';
-import jsbhack from '../assets/certificates/jsbhack.webp';
-import cssbhack from '../assets/certificates/cssbhack.webp';
-
-function ProfileHeader() {
-    return (
-        <motion.div className="flex items-center justify-center w-full gap-1 lg:h-50 md:h-35 h-20">
-            {/* Left Panel */}
-            <motion.div
-                className="flex items-end justify-between w-full h-full 
-                    bg-neutral-400/10 lg:bg-neutral-600/20 
-                    backdrop-blur-[3px] lg:backdrop-blur-[1px]
-                    p-2 md:p-3 lg:p-5
-                    rounded-l-lg lg:rounded-l-2xl"
-            >
-                {/* Profile Info */}
-                <div className="flex items-center h-full gap-1.5 md:gap-3 lg:gap-4">
-                    <img
-                        src={Pfp}
-                        alt="Profile"
-                        className="h-full rounded-sm md:rounded-lg lg:rounded-xl"
-                    />
-                    <div className="flex flex-col justify-between gap-2 md:gap-5 lg:gap-8">
-                        <div>
-                            <h1 className="text-white text-[10px] md:text-xl lg:text-3xl">
-                                AKSHIT BANSAL
-                            </h1>
-                            <h2 className="text-neutral-400 text-nowrap text-[8px] md:text-sm lg:text-lg">
-                                MERN-Stack Developer | UI, UX and Graphics Designer
-                            </h2>
-                            <div className="flex items-center gap-1 text-neutral-400 text-[8px] md:text-sm lg:text-xl">
-                                <FaLocationDot className="text-[6px] md:text-xs lg:text-lg" />
-                                <p>Punjab, India</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-1">
-                            <FaCircle className="text-green-500 drop-shadow-sm drop-shadow-green-500 text-[2px] md:text-[5px] lg:text-[7px]" />
-                            <p className="text-neutral-400 text-[5px] md:text-[10px] lg:text-xs">
-                                Available for work
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Contact Buttons */}
-                <div className="flex items-center gap-2 md:gap-3 lg:gap-4 text-nowrap">
-                    <motion.a
-                        href="mailto:artistbansal2004@gmail.com"
-                        target="_blank"
-                        whileHover={{ scale: 1.5 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-1 text-white text-[10px] md:text-xl lg:text-3xl"
-                    >
-                        <SiGmail />
-                    </motion.a>
-                    <motion.a
-                        href="tel:+917009250361"
-                        whileHover={{ scale: 1.5 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-1 text-white text-[10px] md:text-xl lg:text-3xl"
-                    >
-                        <FaPhone />
-                    </motion.a>
-                    <motion.a
-                        href=""
-                        download
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-1 px-2 lg:px-4 py-1 md:py-1 lg:py-2 
-                            text-white text-[8px] md:text-sm lg:text-xl
-                            rounded-full bg-neutral-700 
-                            transition-colors duration-300 
-                            hover:bg-amber-400 hover:text-neutral-800"
-                    >
-                        <FaDownload />
-                        <p>Download CV</p>
-                    </motion.a>
-                </div>
-            </motion.div>
-            {/* Right Social Panel */}
-            <motion.div
-                className="flex flex-col h-full 
-                    bg-neutral-400/10 lg:bg-neutral-600/20
-                    backdrop-blur-[3px] lg:backdrop-blur-[1px] 
-                    p-1.5 md:p-3 lg:p-5
-                    gap-1.5 md:gap-2 lg:gap-4
-                    rounded-r-lg lg:rounded-r-2xl
-                    text-[8px] md:text-lg lg:text-xl 
-                    text-neutral-400"
-            >
-                <a href="https://github.com/akshit-bansal11" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="hover:text-white" />
-                </a>
-                <a href="https://www.linkedin.com/in/akshit-bansal11/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedinIn className="hover:text-sky-600" />
-                </a>
-                <a href="http://hackerrank.com/profile/akshitbansal11" target="_blank" rel="noopener noreferrer">
-                    <FaHackerrank className="hover:text-green-500" />
-                </a>
-                <a href="https://x.com/akshit_bansal11" target="_blank" rel="noopener noreferrer">
-                    <FaXTwitter className="hover:text-white" />
-                </a>
-                <a href="https://leetcode.com/u/akshit-bansal11/" target="_blank" rel="noopener noreferrer">
-                    <SiLeetcode className="hover:text-amber-400" />
-                </a>
-            </motion.div>
-        </motion.div>
-    );
-}
+import ceisd from '../assets/images/certificates/ceisd.webp';
+import ceiga from '../assets/images/certificates/ceiga.webp';
+import sqlbhack from '../assets/images/certificates/sqlbhack.webp';
+import jsbhack from '../assets/images/certificates/jsbhack.webp';
+import cssbhack from '../assets/images/certificates/cssbhack.webp';
 
 function AboutSection() {
     return (
@@ -177,12 +70,13 @@ function ProjectsSection() {
         <ScrollSection id="projects">
             <div className="flex justify-between w-full">
                 <ScrollSectionHeading heading="projects" />
+
                 <NavButton to="/projects">
                     <p>See More</p>
                     <GoArrowUpRight />
                 </NavButton>
             </div>
-            <div className="flex flex-col items-center justify-center gap-2 lg:flex-row lg:justify-around">
+            <div className="flex flex-col p-4 justify-center gap-8 lg:flex-row lg:justify-around">
                 <ProjectCard
                     title="Medishare"
                     description="MediShare is a donation-based platform that connects medicine donors with people in need through a secure and verified system."

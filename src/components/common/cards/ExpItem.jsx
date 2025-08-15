@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const ExpItem = ({ location, company, role, date, points }) => {
     return (
         <motion.div
-            className="text-white bg-neutral-400/10 border-1 border-neutral-600 flex flex-col rounded-2xl lg:p-6 md:p-3 p-1.5 md:gap-3 gap-1.5 overflow-hidden"
+            className="text-white bg-gradient-to-r border-[0.25px] border-neutral-700 from-[#414345]/40 to-[#232526]/10 flex flex-col rounded-2xl lg:p-6 md:p-3 p-1.5 md:gap-3 gap-1.5 overflow-hidden"
         >
             <div className="flex lg:text-sm text-[8px] justify-between">
                 <div className="flex items-center text-neutral-400">

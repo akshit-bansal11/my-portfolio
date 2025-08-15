@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Chillax";
+    src: url("../assets/fonts/Chillax-Extralight.otf");
+}
+
+@font-face {
+    font-family: "Clash";
+    src: url("../assets//fonts/ClashGrotesk-Extralight.otf");
+}
+
+@theme {
+    --font-chillax: Chillax, "sans-serif";
+    --font-clash: Clash, "sans-serif";
+}

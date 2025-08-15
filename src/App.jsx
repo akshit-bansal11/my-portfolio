@@ -8,6 +8,7 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import DotGrid from './components/backgrounds/Dotgrid';
+import LightRays from './components/backgrounds/LightRays';
 
 function getDeviceType() {
   const ua = navigator.userAgent;
@@ -45,18 +46,32 @@ function AppContent() {
           </div>
         ) : (
           <DotGrid
-            dotSize={2}
+            dotSize={1.5}
             gap={20}
             baseColor="#565656"
-            activeColor="ffffff"
-            proximity={120}
+            activeColor="#ffffff"
+            proximity={150}
             shockRadius={250}
             shockStrength={5}
             resistance={750}
-            returnDuration={1.5}
+            returnDuration={1}
           />
         )}
       </div>
+      {/* <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: -1 }}>
+        <LightRays
+            raysOrigin="top-center"
+            raysColor="a1a1a1"
+            raysSpeed={1}
+            lightSpread={1}
+            rayLength={1}
+            followMouse={false}
+            mouseInfluence={0}
+            noiseAmount={0}
+            distortion={0}
+            className="custom-rays"
+          />
+      </div> */}
       <NavBar page={page} />
 
       <Routes>
