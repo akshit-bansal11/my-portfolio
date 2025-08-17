@@ -62,7 +62,7 @@ export default function NavButton({
             
             whileTap={{ scale: 0.95 }} // Scale down on tap
             
-            className={`flex items-center gap-2 text-white lg:text-neutral-300 lg:hover:text-shadow-md lg:text-shadow-white/10 lg:transition-colors lg:duration-100 lg:hover:text-neutral-100 text-[8px] cursor-pointer md:text-sm lg:text-lg lg:text-nowrap md:text-nowrap ${className}`}
+            className={`flex items-center gap-2 text-white lg:text-neutral-300 lg:hover:text-shadow-md lg:text-shadow-white/10 lg:transition-colors lg:duration-100 lg:hover:text-amber-400 text-[8px] cursor-pointer md:text-sm lg:text-lg lg:text-nowrap md:text-nowrap ${className}`}
             
         >
             {children || text} {/* Render children or fallback to text */}
