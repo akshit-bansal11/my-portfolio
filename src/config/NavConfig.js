@@ -5,7 +5,6 @@ import { GrAchievement } from "react-icons/gr";
 
 export const navConfigs = {
     home: [
-        { text: 'About Me', to: 'about', icon: FaUser },
         { text: 'Projects', to: 'projects', icon: FaLaptopCode },
         { text: 'Experience', to: 'experience', icon: FaBriefcase },
         { text: 'Skills', to: 'skills', icon: FaCogs },

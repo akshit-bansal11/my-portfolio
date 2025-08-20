@@ -14,3 +14,7 @@
     --font-chillax: Chillax, "sans-serif";
     --font-clash: Clash, "sans-serif";
 }
+
+::-webkit-scrollbar {
+    display: none;
+}

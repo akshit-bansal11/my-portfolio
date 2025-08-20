@@ -1,71 +1,52 @@
-// Dependencies
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-// NavButton Component
-// A reusable navigation button with routing and smooth scrolling support
 export default function NavButton({
-
-    onClick = null, // Custom click handler
-
-    to = null, // Navigation target (route or section ID)
-
-    className = '', // Additional CSS classes
-
-    children, // Button content (overrides text if provided)
-
-    type = 'button', // Button type (e.g., 'button', 'submit')
-
-    text = 'Button', // Default button text
-
+    onClick = null,
+    to = null,
+    className = '',
+    children,
+    type = 'button',
+    text = 'Button',
 }) {
-
-    // Hooks
     const navigate = useNavigate();
 
-    // Handle button click behavior
     const handleClick = (e) => {
-    
-        // Execute custom onClick if provided
+
         if (onClick) {
             onClick(e);
         }
 
-        // Handle navigation or scrolling
         if (to) {
             if (!to.startsWith('/')) {
-
-                // Scroll to section if 'to' is an element ID
                 const section = document.getElementById(to);
-
                 if (section) {
                     section.scrollIntoView({ behavior: 'smooth' });
                 }
-
             } else {
-                // Navigate to route if 'to' is a path
                 navigate(to);
             }
         }
     };
 
-    // Render
     return (
         <motion.button
-        
             type={type}
-            
             onClick={handleClick}
-            
-            whileHover={{ scale: 1.1 }} // Scale up on hover
-            
-            whileTap={{ scale: 0.95 }} // Scale down on tap
-            
-            className={`flex items-center gap-2 text-white lg:text-neutral-300 lg:hover:text-shadow-md lg:text-shadow-white/10 lg:transition-colors lg:duration-100 lg:hover:text-amber-400 text-[8px] cursor-pointer md:text-sm lg:text-lg lg:text-nowrap md:text-nowrap ${className}`}
-            
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className={`
+                flex items-center gap-2 cursor-pointer
+                text-white lg:text-neutral-300 lg:hover:text-amber-400
+                text-[8px] md:text-sm lg:text-lg 
+                text-nowrap md:text-nowrap lg:text-nowrap
+                transition-colors duration-200 ease-in-out
+                hover:drop-shadow-[0_0_5px_rgba(251,191,36,1)]
+                ${className}
+            `}
         >
-            {children || text} {/* Render children or fallback to text */}
+            {children || text}
         </motion.button>
     );
-}
+};

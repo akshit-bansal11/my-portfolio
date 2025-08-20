@@ -5,37 +5,24 @@ import clsx from 'clsx';
 const IconCard = ({ Icon, name }) => {
     return (
         <motion.div
-            className="flex flex-col t items-center group select-none"
-            initial="rest"
-            whileHover="hover"
-            whileTap="tap"
-            variants={{
-                rest: { scale: 1 },
-                hover: { scale: 1.1 },
-                tap: { scale: 0.2 }
-            }}
-            transition={{ duration: 0.2 }}
+            className="flex flex-col items-center select-none"
         >
             <motion.div
-            whileHover={{rotate: -8, y: -5}}
-            className="flex items-center bg-gradient-to-r hover:border-[0.25px] hover:border-neutral-700 from-[#414345] to-[#232526] md:p-3 p-1.5 lg:rounded-2xl rounded-lg">
+                className="
+                    flex gap-2 items-center lg:px-4 md:px-2 px-1 lg:py-2 md:py-1 py-0.5 md:rounded-sm
+                    bg-neutral-400/10 
+                    border border-neutral-600
+                    text-white
+                ">
                 <Icon
-                    className={clsx(
-                        "lg:text-3xl md:text-xl text-sm transition-colors duration-300",
-                        "text-neutral-400 group-hover:text-white"
-                    )}
+                    className="
+                        lg:text-[20px] md:text-[15px] text-[10px] transition-colors duration-300 text-amber-400"
                 />
-            </motion.div>
-
-            <motion.div
-                variants={{
-                    rest: { opacity: 0, y: -10 },
-                    hover: { opacity: 1, y: 0 }
-                }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="lg:text-sm md:text-xs text-[0px] text-neutral-400 group-hover:text-white"
-            >
-                {name}
+                <div className='
+                    lg:text-[14px] md:text-[10px] text-[7px]
+                '>
+                    {name}
+                </div>
             </motion.div>
         </motion.div>
     );

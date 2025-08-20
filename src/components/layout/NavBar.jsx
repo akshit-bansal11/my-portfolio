@@ -1,6 +1,7 @@
 // Dependencies
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 // Components
 import NavLinks from '../common/sections/NavLinks';
@@ -31,7 +32,11 @@ export default function NavBar({ page = 'home' }) {
     }));
 
     return (
-        <nav className="flex items-center w-full lg:w-min justify-between lg:justify-center px-5 py-3 lg:bg-neutral-600/20 lg:backdrop-blur-[1px] backdrop-blur-[3px] bg-neutral-400/10 rounded-2xl relative">
+        <motion.nav 
+            initial = {{ y: -100, opacity: 0 }}
+            animate = {{ y: 0, opacity: 1 }}
+            transition = {{ duration: 1, ease: 'easeInOut' }}
+            className="flex items-center w-full lg:w-min justify-between lg:justify-center px-5 py-3 lg:backdrop-blur-[1px] backdrop-blur-[3px] border border-neutral-100/30 rounded-2xl">
             
             {/* Hamburger for small screens */}
             <div className="lg:hidden md:hidden">
@@ -57,6 +62,6 @@ export default function NavBar({ page = 'home' }) {
                     />
                 </div>
             )}
-        </nav>
+        </motion.nav>
     );
 }
