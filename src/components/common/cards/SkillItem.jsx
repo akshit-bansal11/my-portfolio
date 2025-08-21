@@ -14,10 +14,19 @@ const IconCard = ({ Icon, name }) => {
                     border border-neutral-600
                     text-white
                 ">
-                <Icon
-                    className="
-                        lg:text-[20px] md:text-[15px] text-[10px] transition-colors duration-300 text-amber-400"
-                />
+                {typeof Icon === "string" ? (
+                    <img
+                        src={Icon}
+                        alt={name}
+                        className="lg:h-[20px] md:h-[15px] h-[10px]"
+                    />
+                ) : (
+                    <Icon
+                        className="
+                            lg:text-[20px] md:text-[15px] text-[10px] transition-colors duration-300 text-amber-400
+                        "
+                    />
+                )}
                 <div className='
                     lg:text-[14px] md:text-[10px] text-[7px]
                 '>

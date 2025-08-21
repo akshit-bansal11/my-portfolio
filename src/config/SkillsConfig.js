@@ -1,11 +1,21 @@
-import { FaPython, FaHtml5, FaCss3, FaReact, FaBootstrap, FaNodeJs, FaGitAlt, FaGithub, FaFontAwesome, FaCodepen, FaMarkdown, FaSlack, FaWindows, FaUbuntu } from "react-icons/fa6";
-import { SiCplusplus, SiMongodb, SiFirebase, SiExpress, SiDotnet, SiNpm, SiPostman, SiAdobephotoshop, SiAdobeillustrator, SiNotion, SiVite,  SiNvm, SiJquery, SiMui, SiPostgresql, SiGnubash, SiAutocad, SiClion, SiPycharm, SiWebstorm, SiLatex, SiFramer } from "react-icons/si";
+// React Icons
+import { FaPython, FaHtml5, FaCss3, FaReact, FaBootstrap, FaNodeJs, FaGitAlt, FaGithub, FaFontAwesome, FaCodepen, FaMarkdown, FaSlack, FaWindows, FaUbuntu, FaNode } from "react-icons/fa6";
+import { SiCplusplus, SiMongodb, SiFirebase, SiPerplexity, SiGithubcopilot, SiExpress, SiDotnet, SiNpm, SiPostman, SiAdobephotoshop, SiAdobeillustrator, SiClaude, SiNotion, SiVite,  SiNvm, SiJquery, SiMui, SiPostgresql, SiGnubash, SiAutocad, SiClion, SiPycharm, SiWebstorm, SiLatex, SiFramer } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
-import { RiPhpLine, RiTailwindCssFill } from "react-icons/ri";
+import { RiPhpLine, RiTailwindCssFill, RiGeminiFill } from "react-icons/ri";
 import { GrMysql } from "react-icons/gr";
 import { TbBrandCSharp, TbBrandPowershell, TbSvg } from "react-icons/tb";
 import { CgFigma } from "react-icons/cg";
 import { VscVscode } from "react-icons/vsc";
+
+// SVG Imports
+import Grok from "../assets/icons/grok.svg"
+import Firebase from "../assets/icons/firebaseStudio.svg"
+import Napkin from "../assets/icons/napkin.svg"
+import Trae from "../assets/icons/trae.svg"
+import Recraft from "../assets/icons/recraft.svg"
+
+
 
 export const skills = [
   {
@@ -43,6 +53,23 @@ export const skills = [
         { icon: SiExpress, name: "Express.js" },
         { icon: SiDotnet, name: ".NET" },
         { icon: SiFirebase, name: "Firebase" }
+      ]
+    ]
+  },
+  {
+    title: "AI Tools",
+    skills: [
+      [
+        { icon: FaNodeJs, name: "ChatGPT" },
+        { icon: RiGeminiFill, name: "Gemini" },
+        { icon: Grok, name: "Grok" },
+        { icon: SiClaude, name: "Claude" },
+        { icon: Trae, name: "Trae" },
+        { icon: SiGithubcopilot, name: "Copilot" },
+        { icon: SiPerplexity, name: "Perplexity" },
+        { icon: Napkin, name: "Napkin" },
+        { icon: Firebase, name: "Firebase Studio" },
+        { icon: Recraft, name: "Recraft AI" },
       ]
     ]
   },
