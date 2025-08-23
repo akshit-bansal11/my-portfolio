@@ -39,7 +39,7 @@ import ProjectCard from '../../common/cards/ProjectCard';
 export default function Projects() {
     return (
         <ScrollSection id="projects">
-            <div className="flex w-full mb-10 gap-2 items-baseline">
+            <div className="flex w-full gap-2 items-baseline">
                 <ScrollSectionHeading heading="projects" />
                 <TextOnlyButton
                     className="

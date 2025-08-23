@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 function ScrollSectionHeading({ heading }) {
     return (
         <motion.h1
-            initial={{ x: "-100px", opacity: 0 }}
+            initial={{ x: "-70px", opacity: 0 }}
             whileInView={{ x: "0px", opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
             className="
-                lg:text-7xl md:text-4xl text-2xl 
+                lg:text-7xl md:text-4xl text-2xl
                 font-clash font-extrabold
                 capitalize 
                 bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500

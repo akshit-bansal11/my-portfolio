@@ -27,7 +27,7 @@ import { skills } from '../../../config/SkillsConfig.js';
 export default function Skills() {
     return (
         <ScrollSection id="skills">
-            <div className="flex w-full gap-2 items-baseline"><ScrollSectionHeading heading="skills" /></div>
+            <div className="flex w-full"><ScrollSectionHeading heading="skills" /></div>
             <div className="flex flex-col md:gap-5 gap-2">
                 {skills.map((section, index) => (
                     <SkillSection key={index} title={section.title} skills={section.skills} />

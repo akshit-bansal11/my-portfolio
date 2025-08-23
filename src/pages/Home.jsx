@@ -23,7 +23,7 @@ import Education from '../components/layout/home/Education.jsx';
 //--------------------|____________________|--------------------//
 function Home() {
     return (
-        <div className="flex flex-col items-center w-full gap-4 md:gap-7 lg:gap-30">
+        <div className="flex flex-col items-center w-full gap-30 md:gap-20 lg:gap-30">
             <About
                 text="Building Practical Web Experiences"
                 delay={150}
