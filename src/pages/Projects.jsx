@@ -31,6 +31,7 @@ import dclock from '../assets/images/projects/Tools/dclock.webp'
 import code from '../assets/images/projects/code.webp'
 import ipo from '../assets/images/designs/ipo.webp'
 import ecom from '../assets/images/designs/ecom.webp'
+import { head } from 'framer-motion/client'
 
 // ──────────────────────────────────────────────
 // Animation variants for section entry
@@ -293,10 +294,10 @@ const sectionConfigs = [
 // ──────────────────────────────────────────────
 function Projects() {
     return (
-        <div className="w-full h-full flex flex-col items-center gap-5">
+        <div className="w-full h-full flex flex-col items-center gap-25">
             {sectionConfigs.map(({ id, heading, layout, dataKey }) => (
                 <ScrollSection id={id} key={id}>
-                    <ScrollSectionHeading heading={heading} />
+                    <div className="flex w-full gap-2 items-baseline"><ScrollSectionHeading heading={heading} /></div>
                     {renderProjectCards(projectsData[dataKey], layout)}
                 </ScrollSection>
             ))}

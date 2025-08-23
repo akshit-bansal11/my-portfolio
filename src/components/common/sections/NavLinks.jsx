@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Components
-import NavButton from '../buttons/TextOnlyButton';
+import TextOnlyButton from '../buttons/TextOnlyButton';
 
 // NavLinks Component
 // A reusable list of navigation buttons with customizable layout and animation
@@ -18,7 +18,7 @@ export default function NavLinks({
     return (
         <motion.ul
 
-            className={`flex w-full justify-center items-center lg:flex-nowrap md:flex-row flex-col md:flex-wrap gap-x-8 ${className}`}
+            className={`flex w-full justify-center items-center flex-nowrap lg:gap-x-8 gap-x-4 md:gap-x-6 ${className}`}
 
             initial={{ opacity: 0 }} // Initial opacity for animation
 
@@ -29,18 +29,22 @@ export default function NavLinks({
         >
             {links.map(({ text, to, onClick, icon, className: buttonClassName }, index) => (
                 <li key={index}>
-                    <NavButton
-                    
+                    <TextOnlyButton
+
                         text={text}
-                        
+
                         to={to}
-                        
+
                         onClick={onClick}
-                        
+
                         icon={icon}
-                        
-                        className={buttonClassName} // Button-specific CSS classes
-                        
+
+                        className={`
+                            text-white lg:text-neutral-300 lg:hover:text-amber-400
+                            hover:drop-shadow-[0_0_5px_rgba(251,191,36,1)]
+                            ${buttonClassName}
+                        `} // Button-specific CSS classes
+
                     />
                 </li>
             ))}

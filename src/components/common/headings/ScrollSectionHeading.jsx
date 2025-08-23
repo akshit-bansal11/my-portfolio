@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
 
-function ScrollSectionHeading({heading}) {
+function ScrollSectionHeading({ heading }) {
     return (
-        <h1 className = "lg:text-2xl md:text-lg text-[20px]  uppercase text-white">{heading}</h1>
-    )
+        <motion.h1
+            initial={{ x: "-100px", opacity: 0 }}
+            whileInView={{ x: "0px", opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
+            className="
+                lg:text-7xl md:text-4xl text-2xl 
+                font-clash font-extrabold
+                capitalize 
+                bg-gradient-to-r from-amber-500 to-pink-500
+                bg-clip-text text-transparent
+            "
+        >
+            {heading}
+        </motion.h1>
+    );
 }
 
-export default ScrollSectionHeading
+export default ScrollSectionHeading;
