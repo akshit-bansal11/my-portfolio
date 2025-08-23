@@ -10,7 +10,9 @@ function ScrollSectionHeading({ heading }) {
                 lg:text-7xl md:text-4xl text-2xl 
                 font-clash font-extrabold
                 capitalize 
-                bg-gradient-to-r from-amber-500 to-pink-500
+                bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500
+                hover:bg-gradient-to-r hover:to-amber-500 hover:via-orange-500 hover:from-pink-500
+                transition-colors ease-in-out duration-500
                 bg-clip-text text-transparent
             "
         >

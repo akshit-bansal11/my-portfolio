@@ -1,3 +1,5 @@
+import React from "react";
+
 function ScrollSection({ id = '', children = null, className = '' }) {
     return (
         <section

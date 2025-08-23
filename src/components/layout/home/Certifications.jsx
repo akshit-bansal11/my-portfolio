@@ -8,6 +8,21 @@ import React from "react";
 //--------------------|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|--------------------//
 //--------------------|     COMPONENTS     |--------------------//
 //--------------------|____________________|--------------------//
+import ScrollSection from '../../common/sections/ScrollSection'
+import ScrollSectionHeading from '../../common/headings/ScrollSectionHeading'
+import SkillBadge from "../../common/cards/SkillBadge";
+import Certificate from "../../common/cards/Certificate";
+
+// LinkedIn + Microsoft
+import ceisd from '../../../assets/images/certificates/ceisd.webp';
+import ceiga from '../../../assets/images/certificates/ceiga.webp';
+
+// HackerRank
+import sqlbhack from '../../../assets/images/certificates/sqlbhack.webp';
+import jsbhack from '../../../assets/images/certificates/jsbhack.webp';
+import cssbhack from '../../../assets/images/certificates/cssbhack.webp';
+
+import { SiCplusplus, SiCoursera } from "react-icons/si";
 
 
 export default function Certifications() {
