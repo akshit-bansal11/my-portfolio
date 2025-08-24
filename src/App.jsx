@@ -29,7 +29,7 @@ function AppContent() {
 
   return (
     <motion.div
-      className="flex flex-col font-thin justify-center items-center lg:gap-10 md:gap-7 gap-4 min-h-screen"
+      className="flex flex-col font-thin justify-center cursor-default items-center lg:gap-10 md:gap-7 gap-4 min-h-screen"
       style={{ minHeight: '100vh', height: '100%', position: 'relative' }}
     >
       {/* Background */}
