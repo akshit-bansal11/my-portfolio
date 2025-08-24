@@ -15,7 +15,7 @@ export default function SkillBadge({
         <motion.a
             href={link}
             target="blank"
-            initial={{ x: -100, opacity: 0 }}
+            initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut", delay: delay } }}
             whileTap={{ scale: 0.9 }}
             className={`
