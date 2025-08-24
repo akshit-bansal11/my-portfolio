@@ -20,8 +20,8 @@ export default function SkillBadge({
             whileTap={{ scale: 0.9 }}
             className={`
                 group flex flex-col justify-between lg:gap-4 md:gap-2 gap-1 rounded-2xl overflow-hidden
-                lg:w-[168px] md:w-[112] w-[56]
-                lg:h-[168px] md:h-[112] h-[56]
+                lg:w-[156px] w-[120px]
+                lg:h-[156px] h-[120px] 
                 bg-gradient-to-br from-neutral-400/20 to-neutral-900/20
                 border border-white/10
                 hover:border-white/30
